@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="sql注入 学习篇  or 1&#x3D;1#  懂得都懂 非常危险 MySQL中有3种注释： ① # ② – （最后面有个空格） ③ &#x2F;**&#x2F;，内联注释，这个可以在SQL语句中间使用。select * from &#x2F;sqli&#x2F; users 不同类型的sql注入： 1 数字型（post）  可以猜测使用的语句类似为    12$id&#x3D;$_POST[&amp;#x27;id&amp;#x27;]select 字段1,字段2 f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql-learn">
+<meta property="og:url" content="http://example.com/2021/11/16/sql-learn/index.html">
+<meta property="og:site_name" content="SCP基金会中国分部驻406特别行动队">
+<meta property="og:description" content="sql注入 学习篇  or 1&#x3D;1#  懂得都懂 非常危险 MySQL中有3种注释： ① # ② – （最后面有个空格） ③ &#x2F;**&#x2F;，内联注释，这个可以在SQL语句中间使用。select * from &#x2F;sqli&#x2F; users 不同类型的sql注入： 1 数字型（post）  可以猜测使用的语句类似为    12$id&#x3D;$_POST[&amp;#x27;id&amp;#x27;]select 字段1,字段2 f">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/11/16/zYwQXdivFVHplsj.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193ad7e2ab3f51d91acfc23.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193ad7e2ab3f51d91acfc2c.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193ad7e2ab3f51d91acfc33.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193ae2a2ab3f51d91ad42d8.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193ae2a2ab3f51d91ad42d4.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193af5f2ab3f51d91adbaa2.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193af5f2ab3f51d91adbab3.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193af5f2ab3f51d91adbaa6.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193afd52ab3f51d91adefdb.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193b5ae2ab3f51d91b023bb.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193b5ae2ab3f51d91b023c1.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193b5ae2ab3f51d91b023c9.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193b5ae2ab3f51d91b023d2.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193b5ae2ab3f51d91b023b6.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193b6902ab3f51d91b0abe3.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193b6902ab3f51d91b0abe8.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193b6902ab3f51d91b0abef.png">
+<meta property="og:image" content="https://pic.imgdb.cn/item/6193b6902ab3f51d91b0abfa.png">
+<meta property="article:published_time" content="2021-11-16T12:46:37.000Z">
+<meta property="article:modified_time" content="2021-11-16T13:55:41.757Z">
+<meta property="article:author" content="王">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/11/16/zYwQXdivFVHplsj.png">
+
+
+<link rel="canonical" href="http://example.com/2021/11/16/sql-learn/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/11/16/sql-learn/","path":"2021/11/16/sql-learn/","title":"sql-learn"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>sql-learn | SCP基金会中国分部驻406特别行动队</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="SCP基金会中国分部驻406特别行动队" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">SCP基金会中国分部驻406特别行动队</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">找一只可可爱爱的八重樱</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">王</p>
+  <div class="site-description" itemprop="description">喵个咪</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/16/sql-learn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          sql-learn
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-11-16 20:46:37 / 修改时间：21:55:41" itemprop="dateCreated datePublished" datetime="2021-11-16T20:46:37+08:00">2021-11-16</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>sql注入 学习篇</p>
+<p> or 1=1#  懂得都懂 非常危险</p>
+<p>MySQL中有3种注释：</p>
+<p>① #</p>
+<p>② – （最后面有个空格）</p>
+<p>③ /**/，内联注释，这个可以在SQL语句中间使用。select * from /<em>sqli</em>/ users</p>
+<p>不同类型的sql注入：</p>
+<p>1 数字型（post）</p>
+<p><img src="https://i.loli.net/2021/11/16/zYwQXdivFVHplsj.png" alt="1.PNG"></p>
+<p>可以猜测使用的语句类似为   </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$id=$_POST[&#x27;id&#x27;]</span><br><span class="line">select 字段1,字段2 from 表名 where id=1$id</span><br></pre></td></tr></table></figure>
+
+<p>因此抓包</p>
+<p><img src="https://pic.imgdb.cn/item/6193ad7e2ab3f51d91acfc23.png"></p>
+<p>构造一个万能钥匙语句</p>
+<p><img src="https://pic.imgdb.cn/item/6193ad7e2ab3f51d91acfc2c.png"></p>
+<p>2 字符型注入（get）</p>
+<p><img src="https://pic.imgdb.cn/item/6193ad7e2ab3f51d91acfc33.png"></p>
+<p>可以猜测的 后台执行语句大概为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$name=$_GET[&#x27;username&#x27;]</span><br><span class="line">select 字段1,字段2 from 表名 where username=&#x27;$name&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>所以我们可以构造一个or 语句</p>
+<p>如</p>
+<p><img src="https://pic.imgdb.cn/item/6193ae2a2ab3f51d91ad42d8.png"></p>
+<p>得到的结果</p>
+<p><img src="https://pic.imgdb.cn/item/6193ae2a2ab3f51d91ad42d4.png"></p>
+<p>3 搜索型注入</p>
+<p>这里发现挺有意思的事（不说了）</p>
+<p>搜索型猜测后台使用了数据库中的搜索这个逻辑，比如用了 LIKE</p>
+<p><img src="https://pic.imgdb.cn/item/6193af5f2ab3f51d91adbaa2.png"></p>
+<p>当输入1时发现：</p>
+<p><img src="https://pic.imgdb.cn/item/6193af5f2ab3f51d91adbab3.png"></p>
+<p>这里用or也可以 但是手痒了用xor</p>
+<p><img src="https://pic.imgdb.cn/item/6193af5f2ab3f51d91adbaa6.png"></p>
+<p>结果：</p>
+<p><img src="https://pic.imgdb.cn/item/6193afd52ab3f51d91adefdb.png"></p>
+<p> xx型 管他什么类型 只要能制造出闭合 就是我们的本事</p>
+<p>（长话短说）（不想截图好累啊 写这篇博客的时候背好痛）<img src="https://pic.imgdb.cn/item/6193b5ae2ab3f51d91b023bb.png"></p>
+<p>发现是get型传输 传输的参数如下：（打字好累·······）</p>
+<p><img src="https://pic.imgdb.cn/item/6193b5ae2ab3f51d91b023c1.png"></p>
+<p>通过测试（步骤太长 简单来说就是猜）</p>
+<p>发现构造如下语句可使其闭合</p>
+<p><img src="https://pic.imgdb.cn/item/6193b5ae2ab3f51d91b023c9.png"></p>
+<p>查字段数 </p>
+<p><img src="https://pic.imgdb.cn/item/6193b5ae2ab3f51d91b023d2.png"></p>
+<p>判断回显位置</p>
+<p><img src="https://pic.imgdb.cn/item/6193b5ae2ab3f51d91b023b6.png"></p>
+<p>都会回显呢 真好</p>
+<p>现在暴库</p>
+<p><img src="https://pic.imgdb.cn/item/6193b6902ab3f51d91b0abe3.png"></p>
+<p>爆好了 就一个 不用猜了接着干啥不用解释了</p>
+<p><img src="https://pic.imgdb.cn/item/6193b6902ab3f51d91b0abe8.png"></p>
+<p><img src="https://pic.imgdb.cn/item/6193b6902ab3f51d91b0abef.png"></p>
+<p>一步一步 </p>
+<p><img src="https://pic.imgdb.cn/item/6193b6902ab3f51d91b0abfa.png"></p>
+<p>最后进行md5解密就好了（结果不发了 反正没啥用）</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class=""></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/11/14/%E6%B3%95%E8%A7%84/" rel="prev" title="法规">
+                  <i class="fa fa-chevron-left"></i> 法规
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/11/21/%E7%9B%B2%E6%B3%A8/" rel="next" title="盲注">
+                  盲注 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">王</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
