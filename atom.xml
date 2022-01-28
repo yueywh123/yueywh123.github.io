@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-01-26T13:33:19.413Z</updated>
+  <updated>2022-01-28T12:46:19.086Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>盲注复习1</title>
+    <link href="http://example.com/2022/01/28/%E7%9B%B2%E6%B3%A8%E5%A4%8D%E4%B9%A01/"/>
+    <id>http://example.com/2022/01/28/%E7%9B%B2%E6%B3%A8%E5%A4%8D%E4%B9%A01/</id>
+    <published>2022-01-28T12:44:50.000Z</published>
+    <updated>2022-01-28T12:46:19.086Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;今天稍微复习一下pikachu的盲注 顺便再熟悉一下脚本&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/01/28/2WJVqQdISlGDoTH.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>delete</title>
@@ -451,30 +474,6 @@
 &lt;p&gt;极其简单的贝斯&lt;/p&gt;
 &lt;p&gt;题目提供了一个附件1910255db2c8ea4e4d0.png&lt;/p&gt;
 &lt;p&gt;下载发现无法打开&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ctf初体验</title>
-    <link href="http://example.com/2021/10/16/ctf%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
-    <id>http://example.com/2021/10/16/ctf%E5%88%9D%E4%BD%93%E9%AA%8C/</id>
-    <published>2021-10-16T03:41:42.000Z</published>
-    <updated>2021-10-16T04:40:28.355Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天偷偷在家体验了兄弟们的校赛题 真不错（头发都掉了好几根）&lt;/p&gt;
-&lt;p&gt;分享一道极其简单的题目解法&lt;/p&gt;
-&lt;p&gt;小光下围棋.jpg(滑稽)&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
         
       
