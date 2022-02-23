@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-10T07:26:33.212Z</updated>
+  <updated>2022-02-23T12:18:11.428Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js-2</title>
+    <link href="http://example.com/2022/02/23/js-2/"/>
+    <id>http://example.com/2022/02/23/js-2/</id>
+    <published>2022-02-23T12:12:05.000Z</published>
+    <updated>2022-02-23T12:18:11.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;方法2&lt;/u&gt;:&lt;/p&gt;
+&lt;p&gt;浏览器内设置禁用js&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/02/23/nWgeRGkjJEviXIr.png&quot; alt=&quot;7.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>嗯</title>
+    <link href="http://example.com/2022/02/23/%E5%97%AF/"/>
+    <id>http://example.com/2022/02/23/%E5%97%AF/</id>
+    <published>2022-02-23T12:05:47.000Z</published>
+    <updated>2022-02-23T12:17:32.717Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;&lt;img src=&quot;https://s2.loli.net/2022/02/23/S9WCg3qxGTLiebJ.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;文件上传 带js前端验证 &lt;/p&gt;
+&lt;p&gt;先按照正常流程试着来一下&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>sql-lqb-11</title>
@@ -424,53 +472,6 @@
         
     <summary type="html">&lt;p&gt;web-默认口令&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/10/29/fYweXxtdzJyL5Ob.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CTFHUB 3</title>
-    <link href="http://example.com/2021/10/22/CTFHUB3/"/>
-    <id>http://example.com/2021/10/22/CTFHUB3/</id>
-    <published>2021-10-22T14:27:52.000Z</published>
-    <updated>2021-10-22T14:32:22.709Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;web前置技能最后一弹 （划水&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/10/22/dzLFHO3us6KqbhZ.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
-&lt;p&gt;题目很简洁&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CTFHUB 2</title>
-    <link href="http://example.com/2021/10/22/CTFHUB%202/"/>
-    <id>http://example.com/2021/10/22/CTFHUB%202/</id>
-    <published>2021-10-22T13:14:27.000Z</published>
-    <updated>2021-10-22T14:34:41.346Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;（前景提要：上一篇博客介绍了一部分有关web前置技能-http协议的知识，这篇博客会继续学习剩下的内容）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1.基础认证&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     
