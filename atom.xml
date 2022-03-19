@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-23T12:18:11.428Z</updated>
+  <updated>2022-03-19T09:54:34.809Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hf</title>
+    <link href="http://example.com/2022/03/19/hf/"/>
+    <id>http://example.com/2022/03/19/hf/</id>
+    <published>2022-03-19T09:45:41.000Z</published>
+    <updated>2022-03-19T09:54:34.809Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; &lt;em&gt;第一次参加这种比赛 人都看麻了&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;唯一一个自己做出来的 misc–Plain Text&lt;/p&gt;
+&lt;p&gt;纯文本的misc 题目提供了这样一串字符串：&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>js-2</title>
@@ -450,28 +474,6 @@
 &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/10/30/eRD5C6dWyaV789f.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
 &lt;p&gt;一个地址 直接点开看看&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CTFHUB-4</title>
-    <link href="http://example.com/2021/10/27/CTFHUB-4/"/>
-    <id>http://example.com/2021/10/27/CTFHUB-4/</id>
-    <published>2021-10-27T04:13:50.000Z</published>
-    <updated>2021-10-29T12:50:24.502Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;web-默认口令&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/10/29/fYweXxtdzJyL5Ob.png&quot;</summary>
         
       
     
