@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-19T09:54:34.809Z</updated>
+  <updated>2022-04-05T04:33:49.041Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>include</title>
+    <link href="http://example.com/2022/04/05/include/"/>
+    <id>http://example.com/2022/04/05/include/</id>
+    <published>2022-04-05T03:19:51.000Z</published>
+    <updated>2022-04-05T04:33:49.041Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; &lt;u&gt;文件包含（伪协议）&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/04/05/3JlDPdbo5MEZew6.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;(还是第一次做这类题目呢)&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>hf</title>
@@ -449,30 +473,6 @@
 &lt;p&gt;攻击者不需要直接接触受害者。他可以直接利用受害者访问的网站的漏洞来让恶意代码在其浏览器中执行。&lt;/p&gt;
 &lt;p&gt;例1：&lt;/p&gt;
 &lt;p&gt;反射型xss&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CTFHUB 5</title>
-    <link href="http://example.com/2021/10/30/CTFHUB%205/"/>
-    <id>http://example.com/2021/10/30/CTFHUB%205/</id>
-    <published>2021-10-30T02:18:14.000Z</published>
-    <updated>2021-10-30T03:06:29.459Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天来一个简单的信息泄露–目录遍历&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/10/30/eRD5C6dWyaV789f.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
-&lt;p&gt;一个地址 直接点开看看&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
         
       
