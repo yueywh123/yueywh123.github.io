@@ -119,7 +119,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -149,6 +149,92 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/05/xss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/05/xss/" class="post-title-link" itemprop="url">xss</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-11-05 18:34:23 / 修改时间：19:07:41" itemprop="dateCreated datePublished" datetime="2021-11-05T18:34:23+08:00">2021-11-05</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>注：XSS是一种能够在他人浏览器中执行恶意 JavaScript代码的代码注入攻击。</p>
+<p>攻击者不需要直接接触受害者。他可以直接利用受害者访问的网站的漏洞来让恶意代码在其浏览器中执行。</p>
+<p>例1：</p>
+<p>反射型xss</p>
+<p><img src="https://i.loli.net/2021/11/05/GQKz8uBnPwHpLiR.png" alt="1.PNG"></p>
+<p><img src="https://i.loli.net/2021/11/05/lXQePj9C8sJA3bL.png" alt="2.PNG"></p>
+<p>打开网页 我们猜测在第一个输入框存在xss漏洞 输入测试代码</p>
+<p><img src="https://i.loli.net/2021/11/05/2j1gPnK4AZoNrfO.png" alt="3.PNG"></p>
+<p>在返回页面证实这一点</p>
+<p><img src="https://i.loli.net/2021/11/05/lMyR38hPmqv2IcX.png" alt="4.PNG"></p>
+<p>在第二个框输入任意内容 发现返回了”successfully” 推测网页会在后台访问</p>
+<p>打开XSS Platform 创建一个新项目</p>
+<p><img src="https://i.loli.net/2021/11/05/BG7fkhL5KD8oAYU.png" alt="5.PNG"></p>
+<p>使用默认模块</p>
+<p><img src="https://i.loli.net/2021/11/05/iFQIljZWUwdSztm.png" alt="6.PNG"></p>
+<p>在第一个框输入XSS Platform提供的实例代码</p>
+<p><img src="https://i.loli.net/2021/11/05/LhiTw3AX2lp5DFv.png" alt="7.PNG"></p>
+<p>提交后将网址复制到第二个框运行</p>
+<p><img src="https://i.loli.net/2021/11/05/UvrpDqRw9kQtEL4.png" alt="8.PNG"></p>
+<p>回到XSS Platform的后台 我们可以得到flag</p>
+<!--解题思路xss一般的用途是什么？是获取别人的cookie。cookie相当于每个人的登录凭证，如果得到了别人的cookie，我们将可以不用输账号密码，直接登录。所以flag一定是不可能藏在自己的cookie里的，自己的cookie没有意义，自己的cookie能直接浏览器控制台里知道，也不需要xss，那么flag一定是在别人的cookie里 而这道题目模拟了一个机器人，我们的目标就是获得这个机器人的Cookie，然后"盗它的号"，所以获取了这个机器人的Cookie就意味着成功。所以第二个文本框就是模拟别人点击这个包含xss的链接的情形-->
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -888,82 +974,6 @@
 <p>浏览器地址栏输入 localhost/pikachu-master/index.php</p>
 <p><img src="https://ae01.alicdn.com/kf/H3d0d64130f374825a6a35eb7794ad04cA.png" alt="4.PNG"></p>
 <p>由于我已经安装初始化过 没有红字初始化 第一次使用请点击首页头的红字初始化</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/29/%E8%9A%81%E5%89%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王">
-      <meta itemprop="description" content="喵个咪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/09/29/%E8%9A%81%E5%89%91/" class="post-title-link" itemprop="url">蚁剑初上手</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-09-29 00:00:00 / 修改时间：15:15:28" itemprop="dateCreated datePublished" datetime="2021-09-29T00:00:00+08:00">2021-09-29</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>前言：蚁剑是一款开源的跨平台网站管理工具，它主要面向于合法授权的渗透测试安全人员以及进行常规操作的网站管理员。简单来说，就是一款shell控制端软件。攻击者在入侵网站时，通常要通过各种方式写入Webshell，从而获得服务器的控制权限，然后再执行系统命令、权限提升、读取配置文件、窃取用户数据，篡改网站页面等操作。因此蚁剑便是这样一把不可或缺的利刃。</p>
-<p>简单训练题</p>
-<p>1<img src="https://i.loli.net/2021/09/29/oVNgWdEXjl5MT6k.png" alt="1.PNG"></p>
-<p>配置好蚁剑的代理设置 为接下来的步骤做准备</p>
-<p>2<img src="https://i.loli.net/2021/09/29/SHeo85tuVh1EdmI.png" alt="2.PNG"></p>
-<p>很简单的题目 题目点明我们要使用webshell来获取flag 而下面一行很显然告诉我们密码为shell</p>
-<p>3<img src="https://i.loli.net/2021/09/29/o8zvjK16LZCFqGE.png" alt="3.PNG"></p>
-<p>填写好地址和连接密码 点击 “添加”</p>
-<p>4<img src="https://i.loli.net/2021/09/29/gNrLhnTeWpMQyiU.png" alt="4.PNG"></p>
-<p>这里我们看到了关键文件 ：flag.txt 双击打开</p>
-<p>5<img src="https://i.loli.net/2021/09/29/pOIsvPanlZGQRSE.png" alt="5.PNG"></p>
-<p>成功获取flag</p>
 
       
     </div>
