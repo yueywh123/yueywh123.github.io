@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-09T11:52:46.857Z</updated>
+  <updated>2022-04-10T10:47:55.195Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>端口扫描-ssrf</title>
+    <link href="http://example.com/2022/04/10/%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F-ssrf/"/>
+    <id>http://example.com/2022/04/10/%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F-ssrf/</id>
+    <published>2022-04-10T10:39:07.000Z</published>
+    <updated>2022-04-10T10:47:55.195Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/04/10/FXaicmATNMWElJU.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;题目给了范围 直接到burp suite 抓包&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>常见文件目录</title>
+    <link href="http://example.com/2022/04/10/%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95/"/>
+    <id>http://example.com/2022/04/10/%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95/</id>
+    <published>2022-04-10T10:15:08.000Z</published>
+    <updated>2022-04-10T10:37:11.490Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;/var/www/html/xxxxxx&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>文件头检查</title>
@@ -424,54 +469,6 @@
         
     <summary type="html">&lt;p&gt;愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光，就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。此后如竟没有炬火：我便是唯一的光。——鲁迅《热风》&lt;/p&gt;
 </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>NSSCTF1</title>
-    <link href="http://example.com/2021/11/13/NSSCTF1/"/>
-    <id>http://example.com/2021/11/13/NSSCTF1/</id>
-    <published>2021-11-13T14:22:22.000Z</published>
-    <updated>2021-11-16T13:41:19.274Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; 1.easy sql&lt;/p&gt;
-&lt;p&gt;（手动注入）（补课）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/13/1ebsg3nZQXNOEiW.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如题</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>sql1</title>
-    <link href="http://example.com/2021/11/08/sql1/"/>
-    <id>http://example.com/2021/11/08/sql1/</id>
-    <published>2021-11-08T12:38:54.000Z</published>
-    <updated>2021-11-08T12:53:59.698Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; sql注入1&lt;/p&gt;
-&lt;p&gt;（逃课警告）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/08/HANeWwPs5zEUx9S.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     
