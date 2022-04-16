@@ -20,25 +20,29 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="喵个咪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SCP基金会中国分部驻406特别行动队">
-<meta property="og:url" content="http://example.com/archives/2022/page/2/index.html">
+<meta name="description" content="php代码审计真的是我的弱项(不如说是完全不会) [HCTF 2018]WarmUp只讲审计 不讲别的了  $whitelist &#x3D; [“source”&#x3D;&gt;”source.php”,”hint”&#x3D;&gt;”hint.php”] 定义两个白名单 isset()函数作用：检测变量是否已设置并且非 NULL 这里用来检测变量是否未设置或为空 is_string()函数判断变量是否是字符串  if">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php审计初学day1">
+<meta property="og:url" content="http://example.com/2022/04/16/php%E5%AE%A1%E8%AE%A1%E5%88%9D%E5%AD%A6day1/index.html">
 <meta property="og:site_name" content="SCP基金会中国分部驻406特别行动队">
-<meta property="og:description" content="喵个咪">
+<meta property="og:description" content="php代码审计真的是我的弱项(不如说是完全不会) [HCTF 2018]WarmUp只讲审计 不讲别的了  $whitelist &#x3D; [“source”&#x3D;&gt;”source.php”,”hint”&#x3D;&gt;”hint.php”] 定义两个白名单 isset()函数作用：检测变量是否已设置并且非 NULL 这里用来检测变量是否未设置或为空 is_string()函数判断变量是否是字符串  if">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/04/16/17d9b8902cef63cc.png">
+<meta property="article:published_time" content="2022-04-16T10:54:40.000Z">
+<meta property="article:modified_time" content="2022-04-16T11:33:23.333Z">
 <meta property="article:author" content="王">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/04/16/17d9b8902cef63cc.png">
 
 
-<link rel="canonical" href="http://example.com/archives/2022/page/2/">
+<link rel="canonical" href="http://example.com/2022/04/16/php%E5%AE%A1%E8%AE%A1%E5%88%9D%E5%AD%A6day1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2022/page/2/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/04/16/php%E5%AE%A1%E8%AE%A1%E5%88%9D%E5%AD%A6day1/","path":"2022/04/16/php审计初学day1/","title":"php审计初学day1"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | SCP基金会中国分部驻406特别行动队</title>
+<title>php审计初学day1 | SCP基金会中国分部驻406特别行动队</title>
   
 
 
@@ -94,7 +98,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -107,6 +111,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HCTF-2018-WarmUp"><span class="nav-number">1.</span> <span class="nav-text">[HCTF 2018]WarmUp</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -148,173 +153,130 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        
-        <span class="collection-header">还行! 目前共计 46 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/16/php%E5%AE%A1%E8%AE%A1%E5%88%9D%E5%AD%A6day1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          php审计初学day1
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2022-04-16 18:54:40 / 修改时间：19:33:23" itemprop="dateCreated datePublished" datetime="2022-04-16T18:54:40+08:00">2022-04-16</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>php代码审计真的是我的弱项(不如说是完全不会)</p>
+<h1 id="HCTF-2018-WarmUp"><a href="#HCTF-2018-WarmUp" class="headerlink" title="[HCTF 2018]WarmUp"></a>[HCTF 2018]WarmUp</h1><p>只讲审计 不讲别的了</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/04/16/17d9b8902cef63cc.png"></p>
+<p>$whitelist = [“source”=&gt;”source.php”,”hint”=&gt;”hint.php”]</p>
+<p>定义两个白名单</p>
+<p>isset()函数作用：检测变量是否已设置并且非 NULL</p>
+<p>这里用来检测变量是否未设置或为空</p>
+<p>is_string()函数判断变量是否是字符串</p>
+<p> if (in_array($page, $whitelist))判断传进变量是否在白名单内</p>
+<p>mb_substr(<br>        $page,<br>        0,<br>        mb_strpos($page . ‘?’, ‘?’)</p>
+<p>mb_substr(a,m,n)函数是对a进行截取，从m截取到n</p>
+<p>mb_strpos(abc,b)函数是返回b在abc中的位置，从0开始</p>
+<p>截取后的变量如果还在白名单中则可通过</p>
+<p><u>mb_strpos($page . ‘?’, ‘?’)中的.‘？’是将’？’添加在page变量后面。</u></p>
+<p>$_page = urldecode($page);<br>      $_page = mb_substr(<br>        $_page,<br>        0,<br>        mb_strpos($_page . ‘?’, ‘?’)<br>      );<br>      if (in_array($_page, $whitelist)) {<br>        return true;</p>
+<p>这里进行了一个url解码 解码后在白名单则返回true</p>
+<p>if (! empty($_REQUEST[‘file’])<br>    &amp;&amp; is_string($_REQUEST[‘file’])<br>    &amp;&amp; emmm::checkFile($_REQUEST[‘file’])<br>  ) {<br>    include $_REQUEST[‘file’];<br>    exit;</p>
+<p>很明了 必须满足三个条件为真才能返回flag</p>
+<p>payload：?file=hint.php?/../../../../../ffffllllaaaagggg</p>
+<p>../多次尝试 直到找到文件</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-23T20:12:05+08:00"
-              content="2022-02-23">
-          02-23
-        </time>
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class=""></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
       </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/23/js-2/" itemprop="url">
-            <span itemprop="name">js-2</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-23T20:05:47+08:00"
-              content="2022-02-23">
-          02-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/23/%E5%97%AF/" itemprop="url">
-            <span itemprop="name">嗯</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-10T15:12:52+08:00"
-              content="2022-02-10">
-          02-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/10/sql-lqb-11/" itemprop="url">
-            <span itemprop="name">sql-lqb-11</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-02-05T17:41:08+08:00"
-              content="2022-02-05">
-          02-05
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/02/05/csrf/" itemprop="url">
-            <span itemprop="name">csrf</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-01-29T18:52:46+08:00"
-              content="2022-01-29">
-          01-29
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/01/29/%E5%AE%BD%E5%AD%97%E8%8A%82/" itemprop="url">
-            <span itemprop="name">宽字节</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-01-28T20:44:50+08:00"
-              content="2022-01-28">
-          01-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/01/28/%E7%9B%B2%E6%B3%A8%E5%A4%8D%E4%B9%A01/" itemprop="url">
-            <span itemprop="name">盲注复习1</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-01-26T21:30:14+08:00"
-              content="2022-01-26">
-          01-26
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/01/26/delete/" itemprop="url">
-            <span itemprop="name">delete</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
-    </div>
   </div>
-  
-  
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2022/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/2022/">1</a><span class="page-number current">2</span>
-  </nav>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/12/htaccess/" rel="prev" title=".htaccess">
+                  <i class="fa fa-chevron-left"></i> .htaccess
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/04/16/cat-dog/" rel="next" title="cat==dog">
+                  cat==dog <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
 
 </div>
   </main>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-12T12:08:07.464Z</updated>
+  <updated>2022-04-16T12:28:04.983Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,74 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>强网杯2019随便注</title>
+    <link href="http://example.com/2022/04/16/%E5%BC%BA%E7%BD%91%E6%9D%AF2019%E9%9A%8F%E4%BE%BF%E6%B3%A8/"/>
+    <id>http://example.com/2022/04/16/%E5%BC%BA%E7%BD%91%E6%9D%AF2019%E9%9A%8F%E4%BE%BF%E6%B3%A8/</id>
+    <published>2022-04-16T12:05:55.000Z</published>
+    <updated>2022-04-16T12:28:04.983Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s3.bmp.ovh/imgs/2022/04/16/f493090a9767bfbe.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;随便打了个select发现被过滤了这么多&lt;/p&gt;
+&lt;p&gt;payload: 1’;show</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>cat==dog</title>
+    <link href="http://example.com/2022/04/16/cat-dog/"/>
+    <id>http://example.com/2022/04/16/cat-dog/</id>
+    <published>2022-04-16T11:28:25.000Z</published>
+    <updated>2022-04-16T11:33:42.035Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 代码审计？&lt;/p&gt;
+&lt;p&gt;f12看到这样一串代码 这多是一件美事啊&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>php审计初学day1</title>
+    <link href="http://example.com/2022/04/16/php%E5%AE%A1%E8%AE%A1%E5%88%9D%E5%AD%A6day1/"/>
+    <id>http://example.com/2022/04/16/php%E5%AE%A1%E8%AE%A1%E5%88%9D%E5%AD%A6day1/</id>
+    <published>2022-04-16T10:54:40.000Z</published>
+    <updated>2022-04-16T11:33:23.333Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;php代码审计真的是我的弱项(不如说是完全不会)&lt;/p&gt;
+&lt;h1 id=&quot;HCTF-2018-WarmUp&quot;&gt;&lt;a href=&quot;#HCTF-2018-WarmUp&quot; class=&quot;headerlink&quot; title=&quot;[HCTF</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>.htaccess</title>
@@ -399,78 +467,6 @@
     <summary type="html">&lt;p&gt;  话不多说 直接上图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/12/01/YadpyRnWK1X59Hh.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
 &lt;p&gt;这里点击提示就可以知道登录的账号密码了（早知道就不会去瞎爆破了</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>insert/update</title>
-    <link href="http://example.com/2021/11/26/insert-update/"/>
-    <id>http://example.com/2021/11/26/insert-update/</id>
-    <published>2021-11-26T10:30:00.000Z</published>
-    <updated>2021-11-27T13:26:57.122Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;insert部分：&lt;/p&gt;
-&lt;p&gt;今天学习一下sql注入-insert&lt;/p&gt;
-&lt;p&gt;insert型的注入漏洞往往存在于注册之类的地方&lt;br&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>盲注</title>
-    <link href="http://example.com/2021/11/21/%E7%9B%B2%E6%B3%A8/"/>
-    <id>http://example.com/2021/11/21/%E7%9B%B2%E6%B3%A8/</id>
-    <published>2021-11-21T01:37:07.000Z</published>
-    <updated>2021-11-21T02:09:32.554Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;盲注学习1&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pic.imgdb.cn/item/6199a3012ab3f51d91de4e52.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>sql-learn</title>
-    <link href="http://example.com/2021/11/16/sql-learn/"/>
-    <id>http://example.com/2021/11/16/sql-learn/</id>
-    <published>2021-11-16T12:46:37.000Z</published>
-    <updated>2021-11-16T13:55:41.757Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;sql注入 学习篇&lt;/p&gt;
-&lt;p&gt; or 1=1#  懂得都懂 非常危险&lt;/p&gt;
-&lt;p&gt;MySQL中有3种注释：&lt;/p&gt;
-&lt;p&gt;① #&lt;/p&gt;
-&lt;p&gt;② – （最后面有个空格）&lt;/p&gt;
-&lt;p&gt;③ /**/，内联注释，这个可以在SQL语句中间使用。select * from</summary>
         
       
     
