@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-16T12:28:04.983Z</updated>
+  <updated>2022-04-18T13:14:58.657Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蛛丝马迹</title>
+    <link href="http://example.com/2022/04/18/%E8%9B%9B%E4%B8%9D%E9%A9%AC%E8%BF%B9/"/>
+    <id>http://example.com/2022/04/18/%E8%9B%9B%E4%B8%9D%E9%A9%AC%E8%BF%B9/</id>
+    <published>2022-04-18T13:05:31.000Z</published>
+    <updated>2022-04-18T13:14:58.657Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://pic.imgdb.cn/item/625d63c8239250f7c5a0f45c.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;解压附件后一堆文件啊&lt;/p&gt;
+&lt;p&gt;发现有一个文件比较敏感：.me.swp&lt;/p&gt;
+&lt;p&gt;这是个备份文件</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>word?</title>
+    <link href="http://example.com/2022/04/18/word/"/>
+    <id>http://example.com/2022/04/18/word/</id>
+    <published>2022-04-18T12:36:13.000Z</published>
+    <updated>2022-04-18T12:37:48.772Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;题目来源2016第五届山东网络安全竞赛&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;附件是一个压缩包&lt;/p&gt;
+&lt;p&gt;binwalk发现除了一个文档外没有其他文件&lt;/p&gt;
+&lt;p&gt;对文档bin一下 </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>强网杯2019随便注</title>
@@ -422,51 +470,6 @@
 &lt;p&gt;singin：&lt;/p&gt;
 &lt;p&gt;打开附件 全是1和0&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/12/03/hZn1DFLvfKbjSmX.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>黑盾杯部分解题思路</title>
-    <link href="http://example.com/2021/12/02/%E9%BB%91%E7%9B%BE%E6%9D%AF%E9%83%A8%E5%88%86%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/"/>
-    <id>http://example.com/2021/12/02/%E9%BB%91%E7%9B%BE%E6%9D%AF%E9%83%A8%E5%88%86%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/</id>
-    <published>2021-12-02T12:14:07.000Z</published>
-    <updated>2021-12-02T12:52:28.680Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天第一次参加了这样正式的ctf竞赛 勉勉强强解了几题 （果然还是太菜了）&lt;/p&gt;
-&lt;p&gt;稍微分享下思路（一些图找不到了</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>http header</title>
-    <link href="http://example.com/2021/12/01/http-header/"/>
-    <id>http://example.com/2021/12/01/http-header/</id>
-    <published>2021-12-01T09:17:28.000Z</published>
-    <updated>2021-12-01T09:22:42.706Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;  话不多说 直接上图&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/12/01/YadpyRnWK1X59Hh.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
-&lt;p&gt;这里点击提示就可以知道登录的账号密码了（早知道就不会去瞎爆破了</summary>
         
       
     
