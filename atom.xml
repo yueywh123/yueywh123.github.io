@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-05-09T13:21:35.675Z</updated>
+  <updated>2022-06-01T13:53:43.939Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>misc-666</title>
+    <link href="http://example.com/2022/06/01/misc-666/"/>
+    <id>http://example.com/2022/06/01/misc-666/</id>
+    <published>2022-06-01T13:13:32.000Z</published>
+    <updated>2022-06-01T13:53:43.939Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;压缩包伪加密&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.bmp.ovh/imgs/2022/06/01/a9e0dab46c04a823.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;修改0900为0000即可解压&lt;/p&gt;
+&lt;p&gt;对压缩包里的图片解密</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>克鲁斯卡尔算法</title>
+    <link href="http://example.com/2022/06/01/%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95/"/>
+    <id>http://example.com/2022/06/01/%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95/</id>
+    <published>2022-06-01T13:12:26.000Z</published>
+    <updated>2022-06-01T13:12:44.605Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;/*开始瞎几把写&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;什么是克鲁斯卡尔算法？&lt;/li&gt;
+&lt;li&gt;克鲁斯卡尔算法是极其常见的一种构造最小生成树的算法 &lt;/li&gt;
+&lt;li&gt;该算法可以简单表述为：&lt;/li&gt;
+&lt;li&gt;将一个图中所有边对权值进行排序存储每一条边的from、to</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>misc4</title>
@@ -60,19 +110,6 @@
 &lt;p&gt;&lt;img</summary>
         
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>misc2</title>
-    <link href="http://example.com/2022/05/09/misc2/"/>
-    <id>http://example.com/2022/05/09/misc2/</id>
-    <published>2022-05-09T13:20:49.000Z</published>
-    <updated>2022-05-09T13:20:49.906Z</updated>
-    
     
     
     
@@ -420,27 +457,6 @@
     <summary type="html">&lt;p&gt;&lt;u&gt;less-11&lt;/u&gt;&lt;/p&gt;
 &lt;p&gt;人麻了 过完年脑子一片混乱ing&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/02/10/4JMIVbzg9hdl65D.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>csrf</title>
-    <link href="http://example.com/2022/02/05/csrf/"/>
-    <id>http://example.com/2022/02/05/csrf/</id>
-    <published>2022-02-05T09:41:08.000Z</published>
-    <updated>2022-02-05T10:05:08.754Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;CSRF，一般来说，攻击者通过伪造用户的浏览器的请求，向访问一个用户自己曾经认证访问过的网站发送出去，使目标网站接收并误以为是用户的真实操作而去执行命令。常用于盗取账号、转账、发送虚假消息等。攻击者利用网站对请求的验证漏洞而实现这样的攻击行为，网站能够确认请求来源于用户的浏</summary>
         
       
     
