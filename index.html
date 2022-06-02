@@ -342,6 +342,13 @@
 
       <time title="创建时间：2022-05-09 21:21:35" itemprop="dateCreated datePublished" datetime="2022-05-09T21:21:35+08:00">2022-05-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-06-02 19:12:46" itemprop="dateModified" datetime="2022-06-02T19:12:46+08:00">2022-06-02</time>
+      </span>
 
   
 </div>
@@ -353,7 +360,25 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <p>蛮有意思的一道题呢</p>
+<p>解压后的文件中有一个txt文档 打开发现疑似存在snow隐写</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/9e832741438573b7.png"></p>
+<p>发现需要密码 去检查其它文件</p>
+<p>将steram文件加上zip后缀发现可以打开但无法解压 hex发现文件头部损坏</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/10b2fe5058ec678f.png"></p>
+<p>将开头的0000改为504B即可</p>
+<p>破解压缩包密码（话说在entity.png图片低位也能看到点东西呢）</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/df3b31a5f227db63.png"></p>
+<p>entity.png低位数据：</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/04309f648fa29acb.png"></p>
+<p>解压后发现要流量分析</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/251017c5be0e8edc.png"></p>
+<p>找到一个文件导出</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/81a99e50dc9ae07c.png"></p>
+<p>简单的音频隐写</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/ea12e82a72d98a7c.png"></p>
+<p>snow密码找到 完事</p>
+
       
     </div>
 
