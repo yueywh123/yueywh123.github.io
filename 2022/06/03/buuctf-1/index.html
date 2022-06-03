@@ -20,35 +20,38 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="蛮有意思的一道题呢 解压后的文件中有一个txt文档 打开发现疑似存在snow隐写  发现需要密码 去检查其它文件 将steram文件加上zip后缀发现可以打开但无法解压 hex发现文件头部损坏  将开头的0000改为504B即可 破解压缩包密码（话说在entity.png图片低位也能看到点东西呢）  entity.png低位数据：  解压后发现要流量分析  找到一个文件导出  简单的音频隐写  s">
+<meta name="description" content="信步向西北 所见正如童谣所绘   抓包发现一个隐藏的页面 打开：  点击select直接跳转到了end页面  根据提示抓包  又是一个隐藏页面  提示我们flag在flag.php里面  直接访问发现找不到flag  想到之前学过的php伪协议中的filter 构造payload：?&#x2F;file&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;fla">
 <meta property="og:type" content="article">
-<meta property="og:title" content="misc4">
-<meta property="og:url" content="http://example.com/2022/05/09/misc4/index.html">
+<meta property="og:title" content="buuctf-1">
+<meta property="og:url" content="http://example.com/2022/06/03/buuctf-1/index.html">
 <meta property="og:site_name" content="SCP基金会中国分部驻406特别行动队">
-<meta property="og:description" content="蛮有意思的一道题呢 解压后的文件中有一个txt文档 打开发现疑似存在snow隐写  发现需要密码 去检查其它文件 将steram文件加上zip后缀发现可以打开但无法解压 hex发现文件头部损坏  将开头的0000改为504B即可 破解压缩包密码（话说在entity.png图片低位也能看到点东西呢）  entity.png低位数据：  解压后发现要流量分析  找到一个文件导出  简单的音频隐写  s">
+<meta property="og:description" content="信步向西北 所见正如童谣所绘   抓包发现一个隐藏的页面 打开：  点击select直接跳转到了end页面  根据提示抓包  又是一个隐藏页面  提示我们flag在flag.php里面  直接访问发现找不到flag  想到之前学过的php伪协议中的filter 构造payload：?&#x2F;file&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x3D;convert.base64-encode&#x2F;resource&#x3D;fla">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/02/9e832741438573b7.png">
-<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/02/10b2fe5058ec678f.png">
-<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/02/df3b31a5f227db63.png">
-<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/02/04309f648fa29acb.png">
-<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/02/251017c5be0e8edc.png">
-<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/02/81a99e50dc9ae07c.png">
-<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/02/ea12e82a72d98a7c.png">
-<meta property="article:published_time" content="2022-05-09T13:21:35.000Z">
-<meta property="article:modified_time" content="2022-06-02T11:12:46.383Z">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/03/c62f6a85f6956c04.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/03/6c179a8f7ede37b7.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/03/c8fdaf70e7eb7c78.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/03/7d7a02ecbea6d9e3.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/03/1e1124d67e98babf.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/03/8b5d4d5ec2587a46.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/03/4f80fbafa2d2e3d0.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/03/4f80fbafa2d2e3d0.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/03/e270cacf3f747466.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/06/03/fdcda05f17352f96.png">
+<meta property="article:published_time" content="2022-06-03T03:55:13.000Z">
+<meta property="article:modified_time" content="2022-06-03T04:01:35.982Z">
 <meta property="article:author" content="王">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/06/02/9e832741438573b7.png">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/06/03/c62f6a85f6956c04.png">
 
 
-<link rel="canonical" href="http://example.com/2022/05/09/misc4/">
+<link rel="canonical" href="http://example.com/2022/06/03/buuctf-1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/05/09/misc4/","path":"2022/05/09/misc4/","title":"misc4"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/06/03/buuctf-1/","path":"2022/06/03/buuctf-1/","title":"buuctf-1"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>misc4 | SCP基金会中国分部驻406特别行动队</title>
+<title>buuctf-1 | SCP基金会中国分部驻406特别行动队</title>
   
 
 
@@ -169,7 +172,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/09/misc4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/03/buuctf-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -182,7 +185,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          misc4
+          buuctf-1
         </h1>
 
         <div class="post-meta-container">
@@ -192,16 +195,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2022-05-09 21:21:35" itemprop="dateCreated datePublished" datetime="2022-05-09T21:21:35+08:00">2022-05-09</time>
+      <time title="创建时间：2022-06-03 11:55:13 / 修改时间：12:01:35" itemprop="dateCreated datePublished" datetime="2022-06-03T11:55:13+08:00">2022-06-03</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-06-02 19:12:46" itemprop="dateModified" datetime="2022-06-02T19:12:46+08:00">2022-06-02</time>
-      </span>
 
   
     <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
@@ -220,24 +217,26 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>蛮有意思的一道题呢</p>
-<p>解压后的文件中有一个txt文档 打开发现疑似存在snow隐写</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/9e832741438573b7.png"></p>
-<p>发现需要密码 去检查其它文件</p>
-<p>将steram文件加上zip后缀发现可以打开但无法解压 hex发现文件头部损坏</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/10b2fe5058ec678f.png"></p>
-<p>将开头的0000改为504B即可</p>
-<p>破解压缩包密码（话说在entity.png图片低位也能看到点东西呢）</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/df3b31a5f227db63.png"></p>
-<p>entity.png低位数据：</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/04309f648fa29acb.png"></p>
-<p>解压后发现要流量分析</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/251017c5be0e8edc.png"></p>
-<p>找到一个文件导出</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/81a99e50dc9ae07c.png"></p>
-<p>简单的音频隐写</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/02/ea12e82a72d98a7c.png"></p>
-<p>snow密码找到 完事</p>
+        <p><u>信步向西北 所见正如童谣所绘</u></p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/c62f6a85f6956c04.png"></p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/6c179a8f7ede37b7.png"></p>
+<p>抓包发现一个隐藏的页面</p>
+<p>打开：</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/c8fdaf70e7eb7c78.png"></p>
+<p>点击select直接跳转到了end页面</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/7d7a02ecbea6d9e3.png"></p>
+<p>根据提示抓包</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/1e1124d67e98babf.png"></p>
+<p>又是一个隐藏页面</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/8b5d4d5ec2587a46.png"></p>
+<p>提示我们flag在flag.php里面</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/4f80fbafa2d2e3d0.png"></p>
+<p>直接访问发现找不到flag</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/4f80fbafa2d2e3d0.png"></p>
+<p>想到之前学过的php伪协议中的filter<img src="https://s3.bmp.ovh/imgs/2022/06/03/e270cacf3f747466.png"></p>
+<p>构造payload：?/file=php://filter/read=convert.base64-encode/resource=flag.php</p>
+<p>最后base64</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/fdcda05f17352f96.png"></p>
 
     </div>
 
@@ -268,14 +267,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/05/09/misc3/" rel="prev" title="misc3">
-                  <i class="fa fa-chevron-left"></i> misc3
+                <a href="/2022/06/01/misc-666/" rel="prev" title="misc-666">
+                  <i class="fa fa-chevron-left"></i> misc-666
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/06/01/%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95/" rel="next" title="克鲁斯卡尔算法">
-                  克鲁斯卡尔算法 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
