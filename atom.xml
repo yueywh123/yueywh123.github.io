@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-06-03T04:01:35.982Z</updated>
+  <updated>2022-07-08T09:38:51.005Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SWPUCTF2021-1</title>
+    <link href="http://example.com/2022/07/08/SWPUCTF2021-1/"/>
+    <id>http://example.com/2022/07/08/SWPUCTF2021-1/</id>
+    <published>2022-07-08T09:34:24.000Z</published>
+    <updated>2022-07-08T09:38:51.005Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;一道很简单的代码审计&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;直接看题&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>buuctf-1</title>
@@ -68,7 +91,7 @@
     <link href="http://example.com/2022/06/01/%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95/"/>
     <id>http://example.com/2022/06/01/%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95/</id>
     <published>2022-06-01T13:12:26.000Z</published>
-    <updated>2022-06-01T14:01:09.269Z</updated>
+    <updated>2022-06-25T08:45:07.287Z</updated>
     
     
       
@@ -454,30 +477,6 @@
     <summary type="html">&lt;p&gt;&lt;u&gt;方法2&lt;/u&gt;:&lt;/p&gt;
 &lt;p&gt;浏览器内设置禁用js&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/02/23/nWgeRGkjJEviXIr.png&quot; alt=&quot;7.PNG&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>嗯</title>
-    <link href="http://example.com/2022/02/23/%E5%97%AF/"/>
-    <id>http://example.com/2022/02/23/%E5%97%AF/</id>
-    <published>2022-02-23T12:05:47.000Z</published>
-    <updated>2022-02-23T12:17:32.717Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;&lt;img src=&quot;https://s2.loli.net/2022/02/23/S9WCg3qxGTLiebJ.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;文件上传 带js前端验证 &lt;/p&gt;
-&lt;p&gt;先按照正常流程试着来一下&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
         
       
