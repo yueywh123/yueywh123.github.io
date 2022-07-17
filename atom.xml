@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-07-16T08:23:56.991Z</updated>
+  <updated>2022-07-17T13:51:49.151Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>today</title>
+    <link href="http://example.com/2022/07/17/today/"/>
+    <id>http://example.com/2022/07/17/today/</id>
+    <published>2022-07-17T13:51:19.000Z</published>
+    <updated>2022-07-17T13:51:49.151Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;今日无事</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>nizhuansiwei</title>
@@ -454,28 +475,6 @@
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/04/10/FXaicmATNMWElJU.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
 &lt;p&gt;题目给了范围 直接到burp suite 抓包&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>常见文件目录</title>
-    <link href="http://example.com/2022/04/10/%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95/"/>
-    <id>http://example.com/2022/04/10/%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95/</id>
-    <published>2022-04-10T10:15:08.000Z</published>
-    <updated>2022-04-10T10:37:11.490Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;/var/www/html/xxxxxx&lt;/p&gt;
-</summary>
         
       
     
