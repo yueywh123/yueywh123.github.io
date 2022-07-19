@@ -20,25 +20,33 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="喵个咪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SCP基金会中国分部驻406特别行动队">
-<meta property="og:url" content="http://example.com/archives/2022/06/index.html">
+<meta name="description" content="git泄露 （又是一个全新的东西呢)&lt;&#x2F;u） git泄露原理以及运用：1、通常开发人员在开发时，通常将源码提交到远程的托管网站（如Github）方便管理与交互，等到开发最后阶段，再将源码从远程服务器上下载到 web 目录下， 如果开发人员忘记将其中的 .git文件删除，则可以通过 .git文件恢复网站源码，来获取一些敏感信息；2、开发人员对站点使用 Git 对版本进行控制，实现自动部署，如果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="http://example.com/2022/07/19/git/index.html">
 <meta property="og:site_name" content="SCP基金会中国分部驻406特别行动队">
-<meta property="og:description" content="喵个咪">
+<meta property="og:description" content="git泄露 （又是一个全新的东西呢)&lt;&#x2F;u） git泄露原理以及运用：1、通常开发人员在开发时，通常将源码提交到远程的托管网站（如Github）方便管理与交互，等到开发最后阶段，再将源码从远程服务器上下载到 web 目录下， 如果开发人员忘记将其中的 .git文件删除，则可以通过 .git文件恢复网站源码，来获取一些敏感信息；2、开发人员对站点使用 Git 对版本进行控制，实现自动部署，如果">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/07/19/tGpI5OnTocy6fBu.png">
+<meta property="og:image" content="https://s2.loli.net/2022/07/19/sqHF542Em8ZkOXN.png">
+<meta property="og:image" content="https://s2.loli.net/2022/07/19/5U9m1pT8RxfBbLa.png">
+<meta property="og:image" content="https://s2.loli.net/2022/07/19/JqkpDg7XWMP8asi.png">
+<meta property="og:image" content="https://s2.loli.net/2022/07/19/OASayoepmMvQc7j.png">
+<meta property="article:published_time" content="2022-07-19T02:58:47.000Z">
+<meta property="article:modified_time" content="2022-07-19T04:41:29.550Z">
 <meta property="article:author" content="王">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/07/19/tGpI5OnTocy6fBu.png">
 
 
-<link rel="canonical" href="http://example.com/archives/2022/06/">
+<link rel="canonical" href="http://example.com/2022/07/19/git/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2022/06/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/07/19/git/","path":"2022/07/19/git/","title":"git"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | SCP基金会中国分部驻406特别行动队</title>
+<title>git | SCP基金会中国分部驻406特别行动队</title>
   
 
 
@@ -148,90 +156,122 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        
-        <span class="collection-header">不错! 目前共计 61 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/19/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          git
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2022-07-19 10:58:47 / 修改时间：12:41:29" itemprop="dateCreated datePublished" datetime="2022-07-19T10:58:47+08:00">2022-07-19</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><u>git泄露 （又是一个全新的东西呢)&lt;/u）</p>
+<p>git泄露原理以及运用：<br>1、通常开发人员在开发时，通常将源码提交到远程的托管网站（如Github）方便管理与交互，等到开发最后阶段，再将源码从远程服务器上下载到 web 目录下， 如果开发人员忘记将其中的 .git文件删除，则可以通过 .git文件恢复网站源码，来获取一些敏感信息；<br>2、开发人员对站点使用 Git 对版本进行控制，实现自动部署，如果配置不当，直接将 .git文件加载到线上环境，这样便引起了.git文件泄露。</p>
+<p>直接上题目：</p>
+<p><img src="https://s2.loli.net/2022/07/19/tGpI5OnTocy6fBu.png" alt="1.PNG"></p>
+<p>打开网页只显示no</p>
+<p>没提示？扫一扫</p>
+<p><img src="https://s2.loli.net/2022/07/19/sqHF542Em8ZkOXN.png" alt="git.PNG"></p>
+<p>发现疑似git泄露</p>
+<p>使用githack回滚一下</p>
+<p><img src="https://s2.loli.net/2022/07/19/5U9m1pT8RxfBbLa.png" alt="w.PNG"></p>
+<p><img src="https://s2.loli.net/2022/07/19/JqkpDg7XWMP8asi.png" alt="4.PNG"></p>
+<p>获得网站源码</p>
+<p>还是很简单的md5判断问题</p>
+<p>这里运用md5无法处理数组来通过（当然使用md5科学记数法的特性也是可以的）</p>
+<p><img src="https://s2.loli.net/2022/07/19/OASayoepmMvQc7j.png" alt="flag.PNG"></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-06-03T11:55:13+08:00"
-              content="2022-06-03">
-          06-03
-        </time>
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class=""></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
       </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/03/buuctf-1/" itemprop="url">
-            <span itemprop="name">buuctf-1</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-06-01T21:13:32+08:00"
-              content="2022-06-01">
-          06-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/01/misc-666/" itemprop="url">
-            <span itemprop="name">misc-666</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-06-01T21:12:26+08:00"
-              content="2022-06-01">
-          06-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/01/%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95/" itemprop="url">
-            <span itemprop="name">克鲁斯卡尔算法</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
-    </div>
   </div>
-  
-  
-  
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/07/17/today/" rel="prev" title="today">
+                  <i class="fa fa-chevron-left"></i> today
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
 
 </div>
   </main>

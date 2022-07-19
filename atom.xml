@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-07-17T13:51:49.151Z</updated>
+  <updated>2022-07-19T04:41:29.550Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git</title>
+    <link href="http://example.com/2022/07/19/git/"/>
+    <id>http://example.com/2022/07/19/git/</id>
+    <published>2022-07-19T02:58:47.000Z</published>
+    <updated>2022-07-19T04:41:29.550Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;git泄露 （又是一个全新的东西呢)&amp;lt;/u）&lt;/p&gt;
+&lt;p&gt;git泄露原理以及运用：&lt;br&gt;1、通常开发人员在开发时，通常将源码提交到远程的托管网站（如Github）方便管理与交互，等到开发最后阶段，再将源码从远程服务器上下载到 web 目录下，</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>today</title>
@@ -451,29 +473,6 @@
         
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/04/12/bRnqCBUImh8a6LA.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
 &lt;p&gt;打开发现这里很温馨的给了我们提示&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>端口扫描-ssrf</title>
-    <link href="http://example.com/2022/04/10/%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F-ssrf/"/>
-    <id>http://example.com/2022/04/10/%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F-ssrf/</id>
-    <published>2022-04-10T10:39:07.000Z</published>
-    <updated>2022-04-10T10:47:55.195Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/04/10/FXaicmATNMWElJU.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
-&lt;p&gt;题目给了范围 直接到burp suite 抓包&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
         
       
