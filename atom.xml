@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-07-19T04:41:29.550Z</updated>
+  <updated>2022-07-20T11:32:46.295Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>misc1</title>
+    <link href="http://example.com/2022/07/20/misc1-1/"/>
+    <id>http://example.com/2022/07/20/misc1-1/</id>
+    <published>2022-07-20T11:31:35.000Z</published>
+    <updated>2022-07-20T11:32:46.295Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;简单的流量分析&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/07/20/kAZFPVzTdWtYrL4.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;根据提示打开流量包&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>base64</title>
+    <link href="http://example.com/2022/07/20/base64/"/>
+    <id>http://example.com/2022/07/20/base64/</id>
+    <published>2022-07-20T05:49:33.000Z</published>
+    <updated>2022-07-20T05:52:29.642Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;base64隐写 （又是新的知识呢）&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;前提知识：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/07/20/KXm4c5FSJ2qMGRW.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>git</title>
@@ -428,52 +475,6 @@
         
     <summary type="html">&lt;p&gt;php代码审计真的是我的弱项(不如说是完全不会)&lt;/p&gt;
 &lt;h1 id=&quot;HCTF-2018-WarmUp&quot;&gt;&lt;a href=&quot;#HCTF-2018-WarmUp&quot; class=&quot;headerlink&quot; title=&quot;[HCTF</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>.htaccess</title>
-    <link href="http://example.com/2022/04/12/htaccess/"/>
-    <id>http://example.com/2022/04/12/htaccess/</id>
-    <published>2022-04-12T11:51:54.000Z</published>
-    <updated>2022-04-12T12:08:07.464Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s3.bmp.ovh/imgs/2022/04/12/62408511eba08f94.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;rt&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>备份文件-网站源码</title>
-    <link href="http://example.com/2022/04/12/%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6-%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81/"/>
-    <id>http://example.com/2022/04/12/%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6-%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81/</id>
-    <published>2022-04-12T11:47:55.000Z</published>
-    <updated>2022-04-12T11:50:50.144Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/04/12/bRnqCBUImh8a6LA.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
-&lt;p&gt;打开发现这里很温馨的给了我们提示&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     
