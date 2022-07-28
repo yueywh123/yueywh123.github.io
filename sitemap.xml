@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2022/07/28/phpweb/</loc>
+    
+    <lastmod>2022-07-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2022/07/20/misc1-1/</loc>
     
     <lastmod>2022-07-20</lastmod>
@@ -445,7 +452,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2022-07-20</lastmod>
+    <lastmod>2022-07-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
