@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-20T03:01:19.291Z</updated>
+  <updated>2022-08-20T03:04:34.869Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>babysql</title>
+    <link href="http://example.com/2022/08/20/babysql/"/>
+    <id>http://example.com/2022/08/20/babysql/</id>
+    <published>2022-08-20T03:04:28.000Z</published>
+    <updated>2022-08-20T03:04:34.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;太久没做sql的题目了 菜的一匹&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;看题目 两个输入框 根据题目应该存在sql注入&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/08/20/Ps3tABGdmbq6y7i.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>web</title>
@@ -451,30 +474,6 @@
 &lt;p&gt;解压后的文件中有一个txt文档 打开发现疑似存在snow隐写&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s3.bmp.ovh/imgs/2022/06/02/9e832741438573b7.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;发现需要密码</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>misc3</title>
-    <link href="http://example.com/2022/05/09/misc3/"/>
-    <id>http://example.com/2022/05/09/misc3/</id>
-    <published>2022-05-09T13:21:24.000Z</published>
-    <updated>2022-06-02T11:23:07.400Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;肥肠简单&lt;/p&gt;
-&lt;p&gt;星空中的诗&lt;/p&gt;
-&lt;p&gt;将附件内的pdf文件拖到ps里 发现两个图层 将第一个图层不透明度拉满&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/06/02/BouIU3wFdvJbKth.png&quot;</summary>
         
       
     

@@ -119,7 +119,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -149,6 +149,83 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/26/delete/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/01/26/delete/" class="post-title-link" itemprop="url">delete</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-01-26 21:30:14 / 修改时间：21:33:19" itemprop="dateCreated datePublished" datetime="2022-01-26T21:30:14+08:00">2022-01-26</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><u>快过年大划水（就当复习一下了）</u></p>
+<p>pikachu delete注入</p>
+<p><img src="https://s2.loli.net/2022/01/26/7kHoMigqTrN4LhW.png" alt="1.PNG"></p>
+<p>可以看到 留言板（皮</p>
+<p><img src="https://s2.loli.net/2022/01/26/CI1xGS9vAEqNYlJ.png" alt="2.PNG"></p>
+<p>在执行删除指令时拦截到这样一条指令</p>
+<p><img src="https://s2.loli.net/2022/01/26/poJR2LdHyzk8EPv.png" alt="3.PNG"></p>
+<p>对指令稍加修改（由于是GET 类型 要进行一下url编码） 依旧是报错注入</p>
+<p><img src="https://s2.loli.net/2022/01/26/Iry9lNDpmTBgsRi.png" alt="4.PNG"></p>
+<p>已经爆出库名  接着下一步</p>
+<p><img src="https://s2.loli.net/2022/01/26/TIKVAhuXxZ1b7qP.png" alt="5.PNG"></p>
+<p><img src="https://s2.loli.net/2022/01/26/JX9c5YmenOkCw8P.png" alt="6.PNG"><img src="https://s2.loli.net/2022/01/26/Dvl1AyzZ3CE5pRs.png" alt="7.PNG"></p>
+<p>完成 </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -916,94 +993,6 @@
 <p>（id=-1’ union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=’security’</p>
 <p>​    这是什么意思呢？将它翻译成文字就是查找数据库中security库下的所有表名）</p>
 <p>（同理：id=-1’ union select 1,group_concat(column_name),3 from information_schema.columns where table_schema=’security’ and table_name=’users’ –+   <strong>=</strong> 查询数据库security下表users中的列）</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/08/sql1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王">
-      <meta itemprop="description" content="喵个咪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/08/sql1/" class="post-title-link" itemprop="url">sql1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-11-08 20:38:54 / 修改时间：20:53:59" itemprop="dateCreated datePublished" datetime="2021-11-08T20:38:54+08:00">2021-11-08</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p> sql注入1</p>
-<p>（逃课警告）</p>
-<p><img src="https://i.loli.net/2021/11/08/HANeWwPs5zEUx9S.png" alt="1.PNG"></p>
-<p><img src="https://i.loli.net/2021/11/08/l9XWtumsSOK5iPE.png" alt="2.PNG"></p>
-<p>提示输入1 那就试一试</p>
-<p><img src="https://i.loli.net/2021/11/08/HjqnAyESksPZv7a.png" alt="3.PNG"></p>
-<p>这里直接逃课（下次演示手动注入）</p>
-<p>kali启动  sqlmap启动</p>
-<p><img src="https://i.loli.net/2021/11/08/Pjo6zBDhcMU2Ln1.png" alt="4.PNG"></p>
-<p>检查是否存在漏洞</p>
-<p><img src="https://i.loli.net/2021/11/08/bKEvBMwUReuXI4A.png" alt="5.PNG"></p>
-<p>确定存在漏洞  并且得知漏洞的类型是time-based blind和UNION query 提交方式是get</p>
-<p><img src="https://i.loli.net/2021/11/08/rtRvU8AmjlefTMb.png" alt="捕获.PNG"></p>
-<p>来爆个库（–dbs就是查出所有的数据库） 发现一共有四个库</p>
-<p><img src="https://i.loli.net/2021/11/08/rMjO5iRE1UxPdpK.png" alt="暗暗.PNG"></p>
-<p>（–current-db 查看当前使用的库) 发现使用的是 sqli</p>
-<p><img src="https://i.loli.net/2021/11/08/OwGBKsYnX8RLoMu.png" alt="10.PNG"></p>
-<p>来爆一下表 </p>
-<p><img src="https://i.loli.net/2021/11/08/N7jBZGAub8keMDY.png" alt="11.PNG"></p>
-<p>发现了关键字符 flag</p>
-<p><img src="https://i.loli.net/2021/11/08/KgVFBU3uHEjGhns.png" alt="q.PNG"></p>
-<p>查看字段详细信息</p>
-<p><img src="https://i.loli.net/2021/11/08/svEL1biG48WYJHh.png" alt="9.PNG"></p>
-<p>   flag   get </p>
 
       
     </div>
