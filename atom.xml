@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-05T12:48:31.593Z</updated>
+  <updated>2022-08-20T03:01:19.291Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>web</title>
+    <link href="http://example.com/2022/08/20/web/"/>
+    <id>http://example.com/2022/08/20/web/</id>
+    <published>2022-08-20T03:01:11.000Z</published>
+    <updated>2022-08-20T03:01:19.291Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;开篇没有什么提示 试着扫一下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/08/19/wEzPUlxvI59LAjT.png&quot; alt=&quot;0.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;设置好线程（没设置直接全timeout）&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>rce</title>
@@ -451,30 +475,6 @@
 &lt;p&gt;星空中的诗&lt;/p&gt;
 &lt;p&gt;将附件内的pdf文件拖到ps里 发现两个图层 将第一个图层不透明度拉满&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/06/02/BouIU3wFdvJbKth.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>misc1</title>
-    <link href="http://example.com/2022/05/09/misc1/"/>
-    <id>http://example.com/2022/05/09/misc1/</id>
-    <published>2022-05-09T13:21:12.000Z</published>
-    <updated>2022-05-30T03:02:05.395Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;iscc misc1&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;第一题纯属送分题 &lt;/p&gt;
-&lt;p&gt;解压文件后有一个加密压缩包和一个图片 图片的分辨率明显有些问题&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     
