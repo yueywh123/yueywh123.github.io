@@ -119,7 +119,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">70</span>
+          <span class="site-state-item-count">71</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -149,6 +149,87 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/%E7%AD%9B%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/20/%E7%AD%9B%E6%B3%95/" class="post-title-link" itemprop="url">筛法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-09-20 16:12:06 / 修改时间：16:23:58" itemprop="dateCreated datePublished" datetime="2022-09-20T16:12:06+08:00">2022-09-20</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p> <u>埃氏筛法求素数(python)</u></p>
+<p>原来写的暴力穷举：</p>
+<p><img src="https://s2.loli.net/2022/09/20/epjfTBCFE3qNokd.png" alt="2.PNG"></p>
+<p>源代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;请输入N的值&quot;)</span><br><span class="line">N = int(input())</span><br><span class="line">list1=[]</span><br><span class="line">print(&quot;正在载入素数 请稍候\n&quot;)</span><br><span class="line">time_start = time.time()</span><br><span class="line">for i in range(2, N):</span><br><span class="line">    for k in range(2, i):</span><br><span class="line">        if i % k == 0:</span><br><span class="line">            break</span><br><span class="line">    else:list1.append(i)</span><br><span class="line">print(list1)</span><br><span class="line"></span><br><span class="line">time_end = time.time()</span><br><span class="line">time_sum = time_end - time_start</span><br><span class="line">print(time_sum)</span><br></pre></td></tr></table></figure>
+
+<p>计算100000内的素数耗时极长：</p>
+<p><img src="https://s2.loli.net/2022/09/20/hW8ZtnlojqrSaiV.png" alt="3.PNG"></p>
+<p>超过12s</p>
+<p><u>筛法求素数：</u></p>
+<p><img src="https://s2.loli.net/2022/09/20/MEiUpBfDd8zTaSH.png" alt="1.PNG"></p>
+<p>源代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">n=int(input(&quot;请输入上限n：\n&quot;))</span><br><span class="line">list1=[]#筛选出的素数存放于此</span><br><span class="line">time_start = time.time()#初始化计时</span><br><span class="line">yinsuo=[True]*(n+1)#初始化引索 默认所有数皆为素数</span><br><span class="line">for i in range(2,n):#已知2为素数 从2开始遍历</span><br><span class="line">    if yinsuo[i]:#素数存入list1内</span><br><span class="line">        list1.append(i)</span><br><span class="line">        for item in range(i+i,n,i):#设置步长为i 遍历筛去所有i的倍数</span><br><span class="line">            yinsuo[item]=False</span><br><span class="line">time_end = time.time()</span><br><span class="line">time_sum = time_end - time_start</span><br><span class="line">print(list1)</span><br><span class="line">print(time_sum)</span><br></pre></td></tr></table></figure>
+
+<p>计算100000以内素数耗时短：</p>
+<p><img src="https://s2.loli.net/2022/09/20/dnuvGqlRAhJVBgS.png" alt="4.PNG"></p>
+<p>不到0.01s</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -893,87 +974,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/19/git/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王">
-      <meta itemprop="description" content="喵个咪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/07/19/git/" class="post-title-link" itemprop="url">git</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-07-19 10:58:47 / 修改时间：12:41:29" itemprop="dateCreated datePublished" datetime="2022-07-19T10:58:47+08:00">2022-07-19</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><u>git泄露 （又是一个全新的东西呢)&lt;/u）</p>
-<p>git泄露原理以及运用：<br>1、通常开发人员在开发时，通常将源码提交到远程的托管网站（如Github）方便管理与交互，等到开发最后阶段，再将源码从远程服务器上下载到 web 目录下， 如果开发人员忘记将其中的 .git文件删除，则可以通过 .git文件恢复网站源码，来获取一些敏感信息；<br>2、开发人员对站点使用 Git 对版本进行控制，实现自动部署，如果配置不当，直接将 .git文件加载到线上环境，这样便引起了.git文件泄露。</p>
-<p>直接上题目：</p>
-<p><img src="https://s2.loli.net/2022/07/19/tGpI5OnTocy6fBu.png" alt="1.PNG"></p>
-<p>打开网页只显示no</p>
-<p>没提示？扫一扫</p>
-<p><img src="https://s2.loli.net/2022/07/19/sqHF542Em8ZkOXN.png" alt="git.PNG"></p>
-<p>发现疑似git泄露</p>
-<p>使用githack回滚一下</p>
-<p><img src="https://s2.loli.net/2022/07/19/5U9m1pT8RxfBbLa.png" alt="w.PNG"></p>
-<p><img src="https://s2.loli.net/2022/07/19/JqkpDg7XWMP8asi.png" alt="4.PNG"></p>
-<p>获得网站源码</p>
-<p>还是很简单的md5判断问题</p>
-<p>这里运用md5无法处理数组来通过（当然使用md5科学记数法的特性也是可以的）</p>
-<p><img src="https://s2.loli.net/2022/07/19/OASayoepmMvQc7j.png" alt="flag.PNG"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

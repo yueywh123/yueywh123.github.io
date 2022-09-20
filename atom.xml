@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-20T03:04:34.869Z</updated>
+  <updated>2022-09-20T08:23:58.026Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>筛法</title>
+    <link href="http://example.com/2022/09/20/%E7%AD%9B%E6%B3%95/"/>
+    <id>http://example.com/2022/09/20/%E7%AD%9B%E6%B3%95/</id>
+    <published>2022-09-20T08:12:06.000Z</published>
+    <updated>2022-09-20T08:23:58.026Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; &lt;u&gt;埃氏筛法求素数(python)&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;原来写的暴力穷举：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/09/20/epjfTBCFE3qNokd.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>babysql</title>
@@ -450,30 +473,6 @@
 &lt;li&gt;克鲁斯卡尔算法是极其常见的一种构造最小生成树的算法 &lt;/li&gt;
 &lt;li&gt;该算法可以简单表述为：&lt;/li&gt;
 &lt;li&gt;将一个图中所有边对权值进行排序存储每一条边的from、to</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>misc4</title>
-    <link href="http://example.com/2022/05/09/misc4/"/>
-    <id>http://example.com/2022/05/09/misc4/</id>
-    <published>2022-05-09T13:21:35.000Z</published>
-    <updated>2022-06-02T11:12:46.383Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;蛮有意思的一道题呢&lt;/p&gt;
-&lt;p&gt;解压后的文件中有一个txt文档 打开发现疑似存在snow隐写&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s3.bmp.ovh/imgs/2022/06/02/9e832741438573b7.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;发现需要密码</summary>
         
       
     
