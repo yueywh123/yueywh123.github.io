@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-20T08:23:58.026Z</updated>
+  <updated>2022-10-02T03:54:49.678Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>numba_加速计算素数</title>
+    <link href="http://example.com/2022/10/02/numba/"/>
+    <id>http://example.com/2022/10/02/numba/</id>
+    <published>2022-10-02T03:29:58.000Z</published>
+    <updated>2022-10-02T03:54:49.678Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;u&gt;书接上回&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;使用埃式筛法可以极大提高效率 一百万以内的素数只需要不到0.01s&lt;/p&gt;
+&lt;p&gt;但是这就是极限了吗？？&lt;br&gt;计算一亿以内的素数需要多久呢？&lt;/p&gt;
+&lt;p&gt;答案是：&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>筛法</title>
@@ -447,32 +472,6 @@
 &lt;p&gt;&lt;img src=&quot;https://s3.bmp.ovh/imgs/2022/06/01/a9e0dab46c04a823.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;修改0900为0000即可解压&lt;/p&gt;
 &lt;p&gt;对压缩包里的图片解密</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>克鲁斯卡尔算法</title>
-    <link href="http://example.com/2022/06/01/%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95/"/>
-    <id>http://example.com/2022/06/01/%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95/</id>
-    <published>2022-06-01T13:12:26.000Z</published>
-    <updated>2022-06-25T08:45:07.287Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;开始瞎几把写&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;什么是克鲁斯卡尔算法？&lt;/li&gt;
-&lt;li&gt;克鲁斯卡尔算法是极其常见的一种构造最小生成树的算法 &lt;/li&gt;
-&lt;li&gt;该算法可以简单表述为：&lt;/li&gt;
-&lt;li&gt;将一个图中所有边对权值进行排序存储每一条边的from、to</summary>
         
       
     

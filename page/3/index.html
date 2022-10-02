@@ -119,7 +119,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">72</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -149,6 +149,91 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/01/%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/06/01/%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">克鲁斯卡尔算法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-06-01 21:12:26" itemprop="dateCreated datePublished" datetime="2022-06-01T21:12:26+08:00">2022-06-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-06-25 16:45:07" itemprop="dateModified" datetime="2022-06-25T16:45:07+08:00">2022-06-25</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>开始瞎几把写</p>
+<ul>
+<li>什么是克鲁斯卡尔算法？</li>
+<li>克鲁斯卡尔算法是极其常见的一种构造最小生成树的算法 </li>
+<li>该算法可以简单表述为：</li>
+<li>将一个图中所有边对权值进行排序存储每一条边的from、to 以及weight</li>
+<li>将上一步列表中的边进行回贴到图</li>
+<li>每一次回贴进行判断是否会构成环  不构成则将边回贴 edges+1</li>
+<li>如何判断是否构成环？</li>
+<li>这里需要用到一个数组用来存储每个结点的parent 相同就构成了环（在同一联通分量）</li>
+<li>初始每个结点parent设为-1 即不存在双亲 每个结点都是独立的</li>
+<li>每添加一条边就要对连接的两个结点修改parent</li>
+<li>即将两个结点放入同一联通分量<br>  核心代码：   <figure class="highlight plaintext"><figcaption><span>Kruskal(EdgeGrapg G)&#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">for(i=0;i&lt;G.vertacNum;i++)</span><br><span class="line">	parent[i]=-1    初始化每个结点</span><br><span class="line">		for(unm=1,i=0;i&lt;G.edgeNum;i++)&#123; </span><br><span class="line">			vex1=findparent(parent,G.edge[i].from);//找到所在树的根节点</span><br><span class="line">			vex2=findparent(parent,G.edge[i].to);</span><br><span class="line">	if(vex1!=vex2)&#123;//对于两个结点的根节点进行比较 若相同则两个结点在同一联通分量内 会构成环</span><br><span class="line">		outputMST(G.edge[i]);//对于不构成环的输出该边（edge[i].from, edge[i],to)</span><br><span class="line">			parent[vex2]=vex1;//修改结点双亲 合并树</span><br><span class="line">				num++</span><br><span class="line">	if(num==G.vertaxNum-1)//当找到了n-1条边时即已经完成了最小生成树的创建 （n为节点个数）</span><br><span class="line">	return;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; </span><br><span class="line">	&#125;</span><br><span class="line"> int findparent(int parent[],int v)</span><br><span class="line"> &#123;</span><br><span class="line">	a=v</span><br><span class="line">		while(parent[a]&gt;-1</span><br><span class="line">			a=parent[t];</span><br><span class="line">			return t;   //循环直到找到结点t的根节点（根节点在初始化时赋值-1）</span><br><span class="line">			&#125; </span><br></pre></td></tr></table></figure></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 在想要使用窗口小部件的地方插入该标签 --&gt;</span><br><span class="line">&lt;iframe width=&quot;640&quot; height=&quot;640&quot; src=&quot;https://cybermap.kaspersky.com/cn/widget/dynamic/dark&quot; frameborder=&quot;0&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -836,83 +921,6 @@
 <p><img src="https://s3.bmp.ovh/imgs/2022/04/12/50387c621fde1b20.png"></p>
 <p>上层目录找到flag  完成</p>
 <p><img src="https://s3.bmp.ovh/imgs/2022/04/12/25fccded58d727ab.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/12/%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6-%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王">
-      <meta itemprop="description" content="喵个咪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/12/%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6-%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81/" class="post-title-link" itemprop="url">备份文件-网站源码</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-04-12 19:47:55 / 修改时间：19:50:50" itemprop="dateCreated datePublished" datetime="2022-04-12T19:47:55+08:00">2022-04-12</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><img src="https://s2.loli.net/2022/04/12/bRnqCBUImh8a6LA.png" alt="1.PNG"></p>
-<p>打开发现这里很温馨的给了我们提示</p>
-<p><img src="https://s2.loli.net/2022/04/12/rEFAXe3ZfjsVBky.png" alt="2.PNG"></p>
-<p>根据提示来写个脚本</p>
-<p><img src="https://s2.loli.net/2022/04/12/rw2ygtMOazY5eC9.png" alt="3.PNG"></p>
-<p><img src="https://s2.loli.net/2022/04/12/cPoIfTkyNS4Zp8n.png" alt="4.PNG"></p>
-<p>发现<a target="_blank" rel="noopener" href="http://www.zip存在文件/">www.zip存在文件</a></p>
-<p><img src="https://s2.loli.net/2022/04/12/5HTFkG6s9XbN3eC.png" alt="5.PNG"></p>
-<p>下载解压后发现一个疑似flag的文件</p>
-<p><img src="https://s2.loli.net/2022/04/12/7XQRkxKuthDGzB2.png" alt="6.PNG"></p>
-<p>点开发现并不在这里 这里就要想到回到网页</p>
-<p><img src="https://s2.loli.net/2022/04/12/CzNaGJwhjWbZFdl.png" alt="7.PNG"></p>
-<p>成功get</p>
 
       
     </div>
