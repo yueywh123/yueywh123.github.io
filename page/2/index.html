@@ -119,7 +119,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">72</span>
+          <span class="site-state-item-count">74</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -149,6 +149,175 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/28/phpweb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/28/phpweb/" class="post-title-link" itemprop="url">phpweb</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-07-28 23:33:33 / 修改时间：23:46:02" itemprop="dateCreated datePublished" datetime="2022-07-28T23:33:33+08:00">2022-07-28</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><u>又是长见识的一天</u></p>
+<p>[网鼎杯 2020 朱雀组]phpweb</p>
+<p>直接上图</p>
+<p><img src="https://s2.loli.net/2022/07/28/wQO8kR3AVPySbfz.png" alt="1.PNG"></p>
+<p>开幕雷击 妈妈他骂我o(TヘTo)</p>
+<p><img src="https://s2.loli.net/2022/07/28/zCOTmcs6DkESVf2.png" alt="2.PNG"></p>
+<p>通过抓包发现奇怪的东西 每隔五秒post两个参</p>
+<p>这两玩意有没有关系呢？</p>
+<p>md5试一试就知道了</p>
+<p><img src="https://s2.loli.net/2022/07/28/sVv2A4k3lXyxwEe.png" alt="3.PNG"></p>
+<p><img src="https://s2.loli.net/2022/07/28/eYosO9p5vBU3WyA.png" alt="4.PNG"></p>
+<p>哟西 大大滴好！</p>
+<p>根据其他大佬的wp知道这儿使用的函数call_user_func</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">function nowamagic($a,$b)   </span><br><span class="line">&#123;   </span><br><span class="line">    echo $a;   </span><br><span class="line">    echo $b;   </span><br><span class="line">&#125;   </span><br><span class="line">call_user_func(&#x27;nowamagic&#x27;, &quot;111&quot;,&quot;222&quot;);   </span><br><span class="line">call_user_func(&#x27;nowamagic&#x27;, &quot;333&quot;,&quot;444&quot;);   </span><br><span class="line">//显示 111 222 333 444   </span><br><span class="line">?&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>所以尝试读一下源码</p>
+<p><img src="https://s2.loli.net/2022/07/28/pKJmnQsjIok52hz.png" alt="5.PNG"></p>
+<p>拿出来看看</p>
+<p><img src="https://s2.loli.net/2022/07/28/YaFoSVeizHCq7XB.png" alt="6.PNG"></p>
+<p>妈诶 这过滤的 直呼内行</p>
+<p>这儿的确卡住了很久 会的和不会的全过滤了 还是大佬wp启发原来还可以用反序列化的方法</p>
+<p>小小改一改：</p>
+<p><img src="https://s2.loli.net/2022/07/28/1rme2xStjvqAN5M.png" alt="0000.PNG"></p>
+<p>序列化一下：</p>
+<p><img src="https://s2.loli.net/2022/07/28/fiJ4dcCkaOlrgyS.png" alt="8.PNG"></p>
+<p><img src="https://s2.loli.net/2022/07/28/qw37aYUBHVOQhAz.png" alt="8.5.PNG"></p>
+<p>成功了一半 继续</p>
+<p><img src="https://s2.loli.net/2022/07/28/olbTBcVI2WmR9Zv.png" alt="9.PNG"></p>
+<p>但目前还没找到flag 一个个文件找下去太麻烦了 有啥办法呢？</p>
+<p><img src="https://s2.loli.net/2022/07/28/yLnTkSpUVtXeMqY.png" alt="10.PNG"></p>
+<p>熟悉的find / -name指令</p>
+<p>直接全找出来看看</p>
+<p><img src="https://s2.loli.net/2022/07/28/mbpigaIfYVMwdyr.png" alt="fi.PNG"></p>
+<p>妙～～～～～～啊～～～～～～～</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/20/misc1-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/20/misc1-1/" class="post-title-link" itemprop="url">misc1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-07-20 19:31:35 / 修改时间：19:32:46" itemprop="dateCreated datePublished" datetime="2022-07-20T19:31:35+08:00">2022-07-20</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><u>简单的流量分析</u></p>
+<p><img src="https://s2.loli.net/2022/07/20/kAZFPVzTdWtYrL4.png" alt="1.PNG"></p>
+<p>根据提示打开流量包</p>
+<p><img src="https://s2.loli.net/2022/07/20/NEiHOkMsAG3BY6C.png" alt="2.PNG"></p>
+<p>直接搜索password发现了可疑的字符串</p>
+<p><img src="https://s2.loli.net/2022/07/20/bQCTmVPfF1zrB5a.png" alt="3.PNG"></p>
+<p>get </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -830,170 +999,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/03/buuctf-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王">
-      <meta itemprop="description" content="喵个咪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/06/03/buuctf-1/" class="post-title-link" itemprop="url">buuctf-1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-06-03 11:55:13 / 修改时间：12:01:35" itemprop="dateCreated datePublished" datetime="2022-06-03T11:55:13+08:00">2022-06-03</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><u>信步向西北 所见正如童谣所绘</u></p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/c62f6a85f6956c04.png"></p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/6c179a8f7ede37b7.png"></p>
-<p>抓包发现一个隐藏的页面</p>
-<p>打开：</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/c8fdaf70e7eb7c78.png"></p>
-<p>点击select直接跳转到了end页面</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/7d7a02ecbea6d9e3.png"></p>
-<p>根据提示抓包</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/1e1124d67e98babf.png"></p>
-<p>又是一个隐藏页面</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/8b5d4d5ec2587a46.png"></p>
-<p>提示我们flag在flag.php里面</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/4f80fbafa2d2e3d0.png"></p>
-<p>直接访问发现找不到flag</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/4f80fbafa2d2e3d0.png"></p>
-<p>想到之前学过的php伪协议中的filter<img src="https://s3.bmp.ovh/imgs/2022/06/03/e270cacf3f747466.png"></p>
-<p>构造payload：?/file=php://filter/read=convert.base64-encode/resource=flag.php</p>
-<p>最后base64</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/03/fdcda05f17352f96.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/01/misc-666/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王">
-      <meta itemprop="description" content="喵个咪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/06/01/misc-666/" class="post-title-link" itemprop="url">misc-666</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-06-01 21:13:32 / 修改时间：21:53:43" itemprop="dateCreated datePublished" datetime="2022-06-01T21:13:32+08:00">2022-06-01</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>压缩包伪加密</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/01/a9e0dab46c04a823.png"></p>
-<p>修改0900为0000即可解压</p>
-<p>对压缩包里的图片解密 跑一下steghide破解脚本</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/01/722758e6e43903ee.png"></p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/01/bd9ef789a0a7a3c2.png"></p>
-<p>解压出一个图片 分辨率有问题 修改高度：</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/01/0392851d893a65f9.png"></p>
-<p>得到内层压缩包解压密码</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/01/b4640e31820e72fa.png"></p>
-<p>对压缩包内的附件流量分析</p>
-<p>找到一个博客 有一张gif</p>
-<p>下载下来逐帧分析</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/01/3551471276ac3ed4.png"></p>
-<p>发现三串字符串 分别进行base64 aes解密可以得到flag（base64解密得到aes解密的key）</p>
-<p><img src="https://s3.bmp.ovh/imgs/2022/06/01/85ce276da386bab9.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1007,7 +1012,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
