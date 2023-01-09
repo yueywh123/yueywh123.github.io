@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-03T03:50:44.997Z</updated>
+  <updated>2023-01-09T04:07:00.959Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>伪协议复习1</title>
+    <link href="http://example.com/2023/01/09/%E4%BC%AA%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A01/"/>
+    <id>http://example.com/2023/01/09/%E4%BC%AA%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A01/</id>
+    <published>2023-01-09T03:53:17.000Z</published>
+    <updated>2023-01-09T04:07:00.959Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/01/09/2JM3qoAXWySwmzG.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;直接读题&lt;/p&gt;
+&lt;p&gt;由于题目提示存在hint.php</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>报错注入test1</title>
@@ -440,7 +463,7 @@
     <link href="http://example.com/2022/07/10/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
     <id>http://example.com/2022/07/10/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</id>
     <published>2022-07-10T09:12:45.000Z</published>
-    <updated>2022-07-10T09:30:14.872Z</updated>
+    <updated>2023-01-09T03:23:05.815Z</updated>
     
     
       
@@ -448,30 +471,7 @@
         
         
     <summary type="html">&lt;p&gt;&lt;u&gt;打开网页&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s1.imagehub.cc/images/2022/07/10/13.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SWPUCTF2021-1</title>
-    <link href="http://example.com/2022/07/08/SWPUCTF2021-1/"/>
-    <id>http://example.com/2022/07/08/SWPUCTF2021-1/</id>
-    <published>2022-07-08T09:34:24.000Z</published>
-    <updated>2022-07-08T09:38:51.005Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;一道很简单的代码审计&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;直接看题&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/01/09/n9g7YifzaAGtLT4.png&quot;</summary>
         
       
     
