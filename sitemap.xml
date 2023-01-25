@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2023/01/25/misc-new-2/</loc>
+    
+    <lastmod>2023-01-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/01/25/misc-new-1/</loc>
+    
+    <lastmod>2023-01-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2023/01/09/%E4%BC%AA%E5%8D%8F%E8%AE%AE%E5%A4%8D%E4%B9%A01/</loc>
     
     <lastmod>2023-01-09</lastmod>
@@ -529,7 +543,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2023-01-09</lastmod>
+    <lastmod>2023-01-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
