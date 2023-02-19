@@ -20,35 +20,40 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="今天第一次参加了这样正式的ctf竞赛 勉勉强强解了几题 （果然还是太菜了） 稍微分享下思路（一些图找不到了 凑合凑合吧） 1.modbus的秘密 这道题的题目告诉我们flag藏在最长的modbus&#x2F;tcp里 我们用wireshark打开  过滤tcp 再按照长度排列  很轻松发现可疑的目标  追踪流轻松找到 2.access 这题要我们根据黑客攻击产生的日志来寻找密码 打开附件   打开有没有感到">
+<meta name="description" content="读题 要用到POST请求的ssrf  试一下访问一下flag  返回的数据中找到一个暂时不知道作用的key 网页上还有一个输入框 输入后显示：  看来只有服务器才能访问  利用file伪协议查看一下index.php和flag.php   看来用到了curl 并且要post方式提交数据包 利用curl支持的gopher协议 自行构建 gopher：  利用gopher协议ssrf常见格式：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="黑盾杯部分解题思路">
-<meta property="og:url" content="http://example.com/2021/12/02/%E9%BB%91%E7%9B%BE%E6%9D%AF%E9%83%A8%E5%88%86%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/index.html">
+<meta property="og:title" content="ssrf_post">
+<meta property="og:url" content="http://example.com/2023/02/19/ssrf-post/index.html">
 <meta property="og:site_name" content="SCP基金会中国分部驻406特别行动队">
-<meta property="og:description" content="今天第一次参加了这样正式的ctf竞赛 勉勉强强解了几题 （果然还是太菜了） 稍微分享下思路（一些图找不到了 凑合凑合吧） 1.modbus的秘密 这道题的题目告诉我们flag藏在最长的modbus&#x2F;tcp里 我们用wireshark打开  过滤tcp 再按照长度排列  很轻松发现可疑的目标  追踪流轻松找到 2.access 这题要我们根据黑客攻击产生的日志来寻找密码 打开附件   打开有没有感到">
+<meta property="og:description" content="读题 要用到POST请求的ssrf  试一下访问一下flag  返回的数据中找到一个暂时不知道作用的key 网页上还有一个输入框 输入后显示：  看来只有服务器才能访问  利用file伪协议查看一下index.php和flag.php   看来用到了curl 并且要post方式提交数据包 利用curl支持的gopher协议 自行构建 gopher：  利用gopher协议ssrf常见格式：">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2021/12/02/EQtkGr47O2oWJHy.png">
-<meta property="og:image" content="https://i.loli.net/2021/12/02/tcDsmgkwMpzyWT7.png">
-<meta property="og:image" content="https://i.loli.net/2021/12/02/macJBI5NVZx2Gjq.png">
-<meta property="og:image" content="https://i.loli.net/2021/12/02/13vXzPd5SInRrfl.png">
-<meta property="og:image" content="https://i.loli.net/2021/12/02/yDa5FCSGpJ81Ukn.png">
-<meta property="og:image" content="https://i.loli.net/2021/12/02/13vXzPd5SInRrfl.png">
-<meta property="og:image" content="https://i.loli.net/2021/12/02/9cjMuC8Plz45eUI.png">
-<meta property="article:published_time" content="2021-12-02T12:14:07.000Z">
-<meta property="article:modified_time" content="2021-12-02T12:52:28.680Z">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/WUecGsv15yrEK7x.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/8bJMX2D9Y4z37xi.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/Z4Cj5eplqwfNMGX.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/T3GKoRFLlu2BZWx.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/Ojot8brDTIsY1ng.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/HAenNu7i8vO5LrZ.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/iDUya93eqJmS6gG.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/4dG1WSpvL6yPMEc.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/ie9Ew6D5NKsGtFC.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/UtnpGXbSKcujEh4.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/yWCOAx4sVqdRlQv.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/19/IbnyhL16i9QCU2E.png">
+<meta property="article:published_time" content="2023-02-19T13:57:29.000Z">
+<meta property="article:modified_time" content="2023-02-19T14:10:38.169Z">
 <meta property="article:author" content="王">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2021/12/02/EQtkGr47O2oWJHy.png">
+<meta name="twitter:image" content="https://s2.loli.net/2023/02/19/WUecGsv15yrEK7x.png">
 
 
-<link rel="canonical" href="http://example.com/2021/12/02/%E9%BB%91%E7%9B%BE%E6%9D%AF%E9%83%A8%E5%88%86%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/">
+<link rel="canonical" href="http://example.com/2023/02/19/ssrf-post/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/12/02/%E9%BB%91%E7%9B%BE%E6%9D%AF%E9%83%A8%E5%88%86%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/","path":"2021/12/02/黑盾杯部分解题思路/","title":"黑盾杯部分解题思路"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/02/19/ssrf-post/","path":"2023/02/19/ssrf-post/","title":"ssrf_post"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>黑盾杯部分解题思路 | SCP基金会中国分部驻406特别行动队</title>
+<title>ssrf_post | SCP基金会中国分部驻406特别行动队</title>
   
 
 
@@ -169,7 +174,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/02/%E9%BB%91%E7%9B%BE%E6%9D%AF%E9%83%A8%E5%88%86%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/19/ssrf-post/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -182,7 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          黑盾杯部分解题思路
+          ssrf_post
         </h1>
 
         <div class="post-meta-container">
@@ -194,7 +199,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-12-02 20:14:07 / 修改时间：20:52:28" itemprop="dateCreated datePublished" datetime="2021-12-02T20:14:07+08:00">2021-12-02</time>
+      <time title="创建时间：2023-02-19 21:57:29 / 修改时间：22:10:38" itemprop="dateCreated datePublished" datetime="2023-02-19T21:57:29+08:00">2023-02-19</time>
     </span>
 
   
@@ -214,33 +219,35 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>今天第一次参加了这样正式的ctf竞赛 勉勉强强解了几题 （果然还是太菜了）</p>
-<p>稍微分享下思路（一些图找不到了 凑合凑合吧）</p>
-<p>1.modbus的秘密</p>
-<p>这道题的题目告诉我们flag藏在最长的modbus/tcp里</p>
-<p>我们用wireshark打开</p>
-<p><img src="https://i.loli.net/2021/12/02/EQtkGr47O2oWJHy.png" alt="1.PNG"></p>
-<p>过滤tcp 再按照长度排列</p>
-<p><img src="https://i.loli.net/2021/12/02/tcDsmgkwMpzyWT7.png" alt="2.PNG"></p>
-<p>很轻松发现可疑的目标</p>
-<p><img src="https://i.loli.net/2021/12/02/macJBI5NVZx2Gjq.png" alt="3.PNG"></p>
-<p>追踪流轻松找到</p>
-<p>2.access</p>
-<p>这题要我们根据黑客攻击产生的日志来寻找密码</p>
-<p>打开附件 </p>
-<p><img src="https://i.loli.net/2021/12/02/13vXzPd5SInRrfl.png" alt="1.PNG"></p>
-<p>打开有没有感到丝丝茫然？</p>
-<p>不急 细细观察很容易发现：</p>
-<p><img src="https://i.loli.net/2021/12/02/yDa5FCSGpJ81Ukn.png" alt="2.PNG"></p>
-<p>这明显是sql盲注 而675 678则是代表正确错误两种回显</p>
-<p><img src="https://i.loli.net/2021/12/02/13vXzPd5SInRrfl.png" alt="1.PNG"></p>
-<p>我猜测这里要写脚本来跑password</p>
-<p>然而本人学识尚浅 写不来脚本只能一条条自己看下去判断</p>
-<p>真—人工智能</p>
-<p>判断出来后根据ascii表查询即可得：</p>
-<p><img src="https://i.loli.net/2021/12/02/9cjMuC8Plz45eUI.png" alt="4.PNG"></p>
-<p>第一二行就是密码账号每一个字节对应的ascii</p>
-<p>下面就是查表结果</p>
+        <p> <img src="https://s2.loli.net/2023/02/19/WUecGsv15yrEK7x.png" alt="1.PNG"></p>
+<p>读题 要用到POST请求的ssrf</p>
+<p><img src="https://s2.loli.net/2023/02/19/8bJMX2D9Y4z37xi.png" alt="2.PNG"></p>
+<p>试一下访问一下flag</p>
+<p><img src="https://s2.loli.net/2023/02/19/Z4Cj5eplqwfNMGX.png" alt="3.PNG"></p>
+<p>返回的数据中找到一个暂时不知道作用的key</p>
+<p>网页上还有一个输入框 输入后显示：</p>
+<p><img src="https://s2.loli.net/2023/02/19/T3GKoRFLlu2BZWx.png" alt="4.PNG"></p>
+<p>看来只有服务器才能访问</p>
+<p><img src="https://s2.loli.net/2023/02/19/Ojot8brDTIsY1ng.png" alt="5.PNG"></p>
+<p>利用file伪协议查看一下index.php和flag.php</p>
+<p><img src="https://s2.loli.net/2023/02/19/HAenNu7i8vO5LrZ.png" alt="6.PNG"></p>
+<p><img src="https://s2.loli.net/2023/02/19/iDUya93eqJmS6gG.png" alt="7.PNG"></p>
+<p>看来用到了curl</p>
+<p>并且要post方式提交数据包</p>
+<p>利用curl支持的gopher协议</p>
+<p>自行构建</p>
+<p>gopher：</p>
+<p><img src="https://s2.loli.net/2023/02/19/4dG1WSpvL6yPMEc.png" alt="8.PNG"></p>
+<p>利用gopher协议ssrf常见格式：</p>
+<p><img src="https://s2.loli.net/2023/02/19/ie9Ew6D5NKsGtFC.png" alt="9.PNG"></p>
+<p>构造的post包：</p>
+<p><img src="https://s2.loli.net/2023/02/19/UtnpGXbSKcujEh4.png" alt="00.PNG"></p>
+<p>进行两次url编码：（两次是因为浏览器先进行一次url解码，curl再进行一次）</p>
+<p>第一次编码后手动将所有的%0A替换为%0D%0A:</p>
+<p>payload:</p>
+<p><img src="https://s2.loli.net/2023/02/19/yWCOAx4sVqdRlQv.png" alt="01.PNG"></p>
+<p>提交得到:</p>
+<p><img src="https://s2.loli.net/2023/02/19/IbnyhL16i9QCU2E.png" alt="02.PNG"></p>
 
     </div>
 
@@ -271,14 +278,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/12/01/http-header/" rel="prev" title="http header">
-                  <i class="fa fa-chevron-left"></i> http header
+                <a href="/2023/01/25/misc-new-2/" rel="prev" title="misc-new-2">
+                  <i class="fa fa-chevron-left"></i> misc-new-2
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/12/03/%E9%BB%91%E7%9B%BE%E6%9D%AF2/" rel="next" title="黑盾杯2">
-                  黑盾杯2 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

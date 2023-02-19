@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-25T09:54:45.014Z</updated>
+  <updated>2023-02-19T14:10:38.169Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssrf_post</title>
+    <link href="http://example.com/2023/02/19/ssrf-post/"/>
+    <id>http://example.com/2023/02/19/ssrf-post/</id>
+    <published>2023-02-19T13:57:29.000Z</published>
+    <updated>2023-02-19T14:10:38.169Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; &lt;img src=&quot;https://s2.loli.net/2023/02/19/WUecGsv15yrEK7x.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;读题 要用到POST请求的ssrf&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>misc-new-2</title>
@@ -448,30 +471,6 @@
 &lt;p&gt;这是我目前做过的较难的一道题了&lt;/p&gt;
 &lt;p&gt;主要还是考察到的知识点较多 而且很多地方还不大熟练&lt;/p&gt;
 &lt;p&gt;RT&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>session</title>
-    <link href="http://example.com/2022/07/15/session%E4%BC%AA%E9%80%A0/"/>
-    <id>http://example.com/2022/07/15/session%E4%BC%AA%E9%80%A0/</id>
-    <published>2022-07-15T09:27:29.000Z</published>
-    <updated>2022-07-15T10:52:16.649Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;感觉更多考验从互联网搜索和利用信息&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s3.bmp.ovh/imgs/2022/07/15/1c54c760ea4fb4ba.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;先注册账号 f12寻找可能存在的提示&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
         
       
