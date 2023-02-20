@@ -20,25 +20,36 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="喵个咪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SCP基金会中国分部驻406特别行动队">
-<meta property="og:url" content="http://example.com/archives/2022/06/index.html">
+<meta name="description" content="git泄露之log  开局先扫描   发现有git泄露的情况 githack下载一下仓库   发现仓库是空的 不急  题目提示了log 运行一下git log 发现有一个remove flag的操作 两种方法之1：  利用git diff对比 方法之2：  git reset 回滚一下版本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git&#x2F;log">
+<meta property="og:url" content="http://example.com/2023/02/20/git-log/index.html">
 <meta property="og:site_name" content="SCP基金会中国分部驻406特别行动队">
-<meta property="og:description" content="喵个咪">
+<meta property="og:description" content="git泄露之log  开局先扫描   发现有git泄露的情况 githack下载一下仓库   发现仓库是空的 不急  题目提示了log 运行一下git log 发现有一个remove flag的操作 两种方法之1：  利用git diff对比 方法之2：  git reset 回滚一下版本">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/02/20/Ws5VwkeU4mxrHKi.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/20/kCMoYgBtTRQHpV7.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/20/jrnubySiqe1x2QN.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/20/uWP9FHvKSzon4Vd.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/20/mZ6ynFzpG2VavbC.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/20/x5FNTXpsjRBUecv.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/20/mzU2FMpbeyjV4Io.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/20/IE69TqKrZNjSef3.png">
+<meta property="article:published_time" content="2023-02-20T08:53:59.000Z">
+<meta property="article:modified_time" content="2023-02-20T08:58:16.432Z">
 <meta property="article:author" content="王">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/02/20/Ws5VwkeU4mxrHKi.png">
 
 
-<link rel="canonical" href="http://example.com/archives/2022/06/">
+<link rel="canonical" href="http://example.com/2023/02/20/git-log/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2022/06/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/02/20/git-log/","path":"2023/02/20/git-log/","title":"git/log"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | SCP基金会中国分部驻406特别行动队</title>
+<title>git/log | SCP基金会中国分部驻406特别行动队</title>
   
 
 
@@ -148,90 +159,128 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        
-        <span class="collection-header">不错! 目前共计 79 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/20/git-log/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          git/log
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2023-02-20 16:53:59 / 修改时间：16:58:16" itemprop="dateCreated datePublished" datetime="2023-02-20T16:53:59+08:00">2023-02-20</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p> git泄露之log</p>
+<p><img src="https://s2.loli.net/2023/02/20/Ws5VwkeU4mxrHKi.png" alt="0.PNG"></p>
+<p>开局先扫描</p>
+<p><img src="https://s2.loli.net/2023/02/20/kCMoYgBtTRQHpV7.png" alt="2.PNG"></p>
+<p><img src="https://s2.loli.net/2023/02/20/jrnubySiqe1x2QN.png" alt="1.PNG"></p>
+<p>发现有git泄露的情况</p>
+<p>githack下载一下仓库</p>
+<p><img src="https://s2.loli.net/2023/02/20/uWP9FHvKSzon4Vd.png" alt="3.PNG"></p>
+<p><img src="https://s2.loli.net/2023/02/20/mZ6ynFzpG2VavbC.png" alt="4.PNG"></p>
+<p>发现仓库是空的 不急 </p>
+<p>题目提示了log</p>
+<p>运行一下git log</p>
+<p>发现有一个remove flag的操作</p>
+<p>两种方法之1：</p>
+<p><img src="https://s2.loli.net/2023/02/20/x5FNTXpsjRBUecv.png" alt="5.PNG"></p>
+<p>利用git diff对比</p>
+<p>方法之2：</p>
+<p><img src="https://s2.loli.net/2023/02/20/mzU2FMpbeyjV4Io.png" alt="6.PNG"></p>
+<p>git reset</p>
+<p>回滚一下版本</p>
+<p><img src="https://s2.loli.net/2023/02/20/IE69TqKrZNjSef3.png" alt="7.PNG"></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-06-03T11:55:13+08:00"
-              content="2022-06-03">
-          06-03
-        </time>
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class=""></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
       </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/03/buuctf-1/" itemprop="url">
-            <span itemprop="name">buuctf-1</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-06-01T21:13:32+08:00"
-              content="2022-06-01">
-          06-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/01/misc-666/" itemprop="url">
-            <span itemprop="name">misc-666</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-06-01T21:12:26+08:00"
-              content="2022-06-01">
-          06-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/06/01/%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94%E7%AE%97%E6%B3%95/" itemprop="url">
-            <span itemprop="name">克鲁斯卡尔算法</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
-    </div>
   </div>
-  
-  
-  
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/02/19/ssrfpost/" rel="prev" title="ssrfpost">
+                  <i class="fa fa-chevron-left"></i> ssrfpost
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
 
 </div>
   </main>
