@@ -20,27 +20,36 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光，就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。此后如竟没有炬火：我便是唯一的光。——鲁迅《热风》">
+<meta name="description" content="一道很简单的ssrf漏洞  一般来说 ssrf出现较常见的是file_get_contents()、curl()、fsocksopen()、fopen()这些函数 如果在某些情况下能够获取网站源码就可以重点关注这些函数 本题已经提示了使用curl 尝试看看flag.php发现：  看看&#x2F;fl4g   看来直接访问一下这个php看看  直接难度骤降 极其简单的传参 一个无所谓的stristr函数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="今日">
-<meta property="og:url" content="http://example.com/2021/11/14/%E4%BB%8A%E6%97%A5-1/index.html">
+<meta property="og:title" content="ssrf_easy">
+<meta property="og:url" content="http://example.com/2023/02/26/ssrf-easy/index.html">
 <meta property="og:site_name" content="SCP基金会中国分部驻406特别行动队">
-<meta property="og:description" content="愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光，就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。此后如竟没有炬火：我便是唯一的光。——鲁迅《热风》">
+<meta property="og:description" content="一道很简单的ssrf漏洞  一般来说 ssrf出现较常见的是file_get_contents()、curl()、fsocksopen()、fopen()这些函数 如果在某些情况下能够获取网站源码就可以重点关注这些函数 本题已经提示了使用curl 尝试看看flag.php发现：  看看&#x2F;fl4g   看来直接访问一下这个php看看  直接难度骤降 极其简单的传参 一个无所谓的stristr函数">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-11-14T11:28:47.000Z">
-<meta property="article:modified_time" content="2021-11-14T11:29:17.358Z">
+<meta property="og:image" content="https://s2.loli.net/2023/02/26/7b5fVrRpWOIkBj3.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/26/VY3BmnwbIKi1fHc.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/26/NGqa4BmLKhC2Mpk.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/26/uUhknYM792emIBw.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/26/Gus9KDCgoQ1OBn8.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/26/OrZye82IQTs3ad1.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/26/CbaLqeDNzS7QfIu.png">
+<meta property="og:image" content="https://s2.loli.net/2023/02/26/zwLe4PQFNUc2Dk8.png">
+<meta property="article:published_time" content="2023-02-26T11:10:06.000Z">
+<meta property="article:modified_time" content="2023-02-26T11:15:14.720Z">
 <meta property="article:author" content="王">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/02/26/7b5fVrRpWOIkBj3.png">
 
 
-<link rel="canonical" href="http://example.com/2021/11/14/%E4%BB%8A%E6%97%A5-1/">
+<link rel="canonical" href="http://example.com/2023/02/26/ssrf-easy/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/11/14/%E4%BB%8A%E6%97%A5-1/","path":"2021/11/14/今日-1/","title":"今日"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/02/26/ssrf-easy/","path":"2023/02/26/ssrf-easy/","title":"ssrf_easy"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>今日 | SCP基金会中国分部驻406特别行动队</title>
+<title>ssrf_easy | SCP基金会中国分部驻406特别行动队</title>
   
 
 
@@ -161,7 +170,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/14/%E4%BB%8A%E6%97%A5-1/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/26/ssrf-easy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -174,7 +183,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          今日
+          ssrf_easy
         </h1>
 
         <div class="post-meta-container">
@@ -186,7 +195,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-11-14 19:28:47 / 修改时间：19:29:17" itemprop="dateCreated datePublished" datetime="2021-11-14T19:28:47+08:00">2021-11-14</time>
+      <time title="创建时间：2023-02-26 19:10:06 / 修改时间：19:15:14" itemprop="dateCreated datePublished" datetime="2023-02-26T19:10:06+08:00">2023-02-26</time>
     </span>
 
   
@@ -206,7 +215,25 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光，就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。此后如竟没有炬火：我便是唯一的光。——鲁迅《热风》</p>
+        <p><img src="https://s2.loli.net/2023/02/26/7b5fVrRpWOIkBj3.png" alt="0.PNG"></p>
+<p>一道很简单的ssrf漏洞</p>
+<p><img src="https://s2.loli.net/2023/02/26/VY3BmnwbIKi1fHc.png" alt="1.PNG"></p>
+<p>一般来说 ssrf出现较常见的是file_get_contents()<code>、</code>curl()<code>、</code>fsocksopen()<code>、</code>fopen()这些函数</p>
+<p>如果在某些情况下能够获取网站源码就可以重点关注这些函数</p>
+<p>本题已经提示了使用curl</p>
+<p>尝试看看flag.php发现：</p>
+<p><img src="https://s2.loli.net/2023/02/26/NGqa4BmLKhC2Mpk.png" alt="2.PNG"></p>
+<p>看看/fl4g</p>
+<p><img src="https://s2.loli.net/2023/02/26/uUhknYM792emIBw.png" alt="3.PNG"></p>
+<p><img src="https://s2.loli.net/2023/02/26/Gus9KDCgoQ1OBn8.png" alt="4.PNG"></p>
+<p>看来直接访问一下这个php看看</p>
+<p><img src="https://s2.loli.net/2023/02/26/OrZye82IQTs3ad1.png" alt="5.PNG"></p>
+<p>直接难度骤降</p>
+<p>极其简单的传参 一个无所谓的stristr函数 还有显眼的/flag提示</p>
+<p><img src="https://s2.loli.net/2023/02/26/CbaLqeDNzS7QfIu.png" alt="6.PNG"></p>
+<p>配合伪协议食用</p>
+<p><img src="https://s2.loli.net/2023/02/26/zwLe4PQFNUc2Dk8.png" alt="7.PNG"></p>
+<p>完成</p>
 
     </div>
 
@@ -237,14 +264,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/11/13/NSSCTF1/" rel="prev" title="NSSCTF1">
-                  <i class="fa fa-chevron-left"></i> NSSCTF1
+                <a href="/2023/02/20/git-log/" rel="prev" title="git/log">
+                  <i class="fa fa-chevron-left"></i> git/log
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/11/14/%E6%B3%95%E8%A7%84/" rel="next" title="法规">
-                  法规 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

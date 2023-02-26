@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-20T08:58:16.432Z</updated>
+  <updated>2023-02-26T11:15:14.720Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssrf_easy</title>
+    <link href="http://example.com/2023/02/26/ssrf-easy/"/>
+    <id>http://example.com/2023/02/26/ssrf-easy/</id>
+    <published>2023-02-26T11:10:06.000Z</published>
+    <updated>2023-02-26T11:15:14.720Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/02/26/7b5fVrRpWOIkBj3.png&quot; alt=&quot;0.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;一道很简单的ssrf漏洞&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>git/log</title>
@@ -450,27 +473,6 @@
         
     <summary type="html">&lt;p&gt;&lt;u&gt;git泄露 （又是一个全新的东西呢)&amp;lt;/u）&lt;/p&gt;
 &lt;p&gt;git泄露原理以及运用：&lt;br&gt;1、通常开发人员在开发时，通常将源码提交到远程的托管网站（如Github）方便管理与交互，等到开发最后阶段，再将源码从远程服务器上下载到 web 目录下，</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>today</title>
-    <link href="http://example.com/2022/07/17/today/"/>
-    <id>http://example.com/2022/07/17/today/</id>
-    <published>2022-07-17T13:51:19.000Z</published>
-    <updated>2022-07-17T13:51:49.151Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;今日无事</summary>
         
       
     
