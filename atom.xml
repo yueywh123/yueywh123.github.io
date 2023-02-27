@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-26T11:15:14.720Z</updated>
+  <updated>2023-02-27T09:35:25.835Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pop1</title>
+    <link href="http://example.com/2023/02/27/pop1/"/>
+    <id>http://example.com/2023/02/27/pop1/</id>
+    <published>2023-02-27T08:24:08.000Z</published>
+    <updated>2023-02-27T09:35:25.835Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;pop链的一道入门题&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/02/27/GQ3UjpReytABiwT.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>ssrf_easy</title>
@@ -451,28 +473,6 @@
     <summary type="html">&lt;p&gt;&lt;u&gt;base64隐写 （又是新的知识呢）&lt;/u&gt;&lt;/p&gt;
 &lt;p&gt;前提知识：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/07/20/KXm4c5FSJ2qMGRW.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>git</title>
-    <link href="http://example.com/2022/07/19/git/"/>
-    <id>http://example.com/2022/07/19/git/</id>
-    <published>2022-07-19T02:58:47.000Z</published>
-    <updated>2022-07-19T04:41:29.550Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;git泄露 （又是一个全新的东西呢)&amp;lt;/u）&lt;/p&gt;
-&lt;p&gt;git泄露原理以及运用：&lt;br&gt;1、通常开发人员在开发时，通常将源码提交到远程的托管网站（如Github）方便管理与交互，等到开发最后阶段，再将源码从远程服务器上下载到 web 目录下，</summary>
         
       
     
