@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-01T14:15:50.389Z</updated>
+  <updated>2023-03-02T09:03:00.305Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简单包含</title>
+    <link href="http://example.com/2023/03/02/%E7%AE%80%E5%8D%95%E5%8C%85%E5%90%AB/"/>
+    <id>http://example.com/2023/03/02/%E7%AE%80%E5%8D%95%E5%8C%85%E5%90%AB/</id>
+    <published>2023-03-02T08:25:54.000Z</published>
+    <updated>2023-03-02T09:03:00.305Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;  一道文件包含的题目（带waf绕过）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/03/02/YoA64mpbBPGWhdl.png&quot; alt=&quot;0.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;post传参</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>pop2</title>
@@ -449,30 +472,6 @@
 &lt;p&gt;[网鼎杯 2020 朱雀组]phpweb&lt;/p&gt;
 &lt;p&gt;直接上图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/07/28/wQO8kR3AVPySbfz.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>misc1</title>
-    <link href="http://example.com/2022/07/20/misc1-1/"/>
-    <id>http://example.com/2022/07/20/misc1-1/</id>
-    <published>2022-07-20T11:31:35.000Z</published>
-    <updated>2022-07-20T11:32:46.295Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;简单的流量分析&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/07/20/kAZFPVzTdWtYrL4.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
-&lt;p&gt;根据提示打开流量包&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     
