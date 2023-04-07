@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-02T09:03:00.305Z</updated>
+  <updated>2023-04-07T08:23:00.096Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>web渗透</title>
+    <link href="http://example.com/2023/04/07/web%E6%B8%97%E9%80%8F/"/>
+    <id>http://example.com/2023/04/07/web%E6%B8%97%E9%80%8F/</id>
+    <published>2023-04-07T07:42:50.000Z</published>
+    <updated>2023-04-07T08:23:00.096Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;做一个基础的web渗透的题目（麻了一个个平台测试模拟题卷的飞起&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/04/07/LtEKUJyYFpICTrv.png&quot; alt=&quot;0.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;本地环境</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>简单包含</title>
@@ -448,30 +471,6 @@
         
     <summary type="html">&lt;p&gt;&lt;u&gt;有意思的题目&lt;/u&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/07/29/76abNBQqdxltJMG.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>phpweb</title>
-    <link href="http://example.com/2022/07/28/phpweb/"/>
-    <id>http://example.com/2022/07/28/phpweb/</id>
-    <published>2022-07-28T15:33:33.000Z</published>
-    <updated>2022-07-28T15:46:02.747Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;又是长见识的一天&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;[网鼎杯 2020 朱雀组]phpweb&lt;/p&gt;
-&lt;p&gt;直接上图&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/07/28/wQO8kR3AVPySbfz.png&quot;</summary>
         
       
     
