@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-07T12:18:26.734Z</updated>
+  <updated>2023-04-29T16:00:16.154Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>web_kp</title>
+    <link href="http://example.com/2023/04/29/web-kp/"/>
+    <id>http://example.com/2023/04/29/web-kp/</id>
+    <published>2023-04-29T13:31:07.000Z</published>
+    <updated>2023-04-29T16:00:16.154Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天简单复盘一下前几天的一个校赛web渗透例题&lt;/p&gt;
+&lt;p&gt;由于担心扫出问题，题目给了扫描的结果，因此前期的信息收集这里可以简单点了&lt;/p&gt;
+&lt;p&gt;直接nmap找到ip地址&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>web渗透</title>
@@ -449,28 +473,6 @@
 &lt;p&gt;上图&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/07/30/EoiRUqHWh6atsjA.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
 &lt;p&gt;打开题目并没有什么</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>unicorn shop</title>
-    <link href="http://example.com/2022/07/29/unicorn/"/>
-    <id>http://example.com/2022/07/29/unicorn/</id>
-    <published>2022-07-29T13:45:06.000Z</published>
-    <updated>2022-07-29T13:45:15.806Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;有意思的题目&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/07/29/76abNBQqdxltJMG.png&quot;</summary>
         
       
     

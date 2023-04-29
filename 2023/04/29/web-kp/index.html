@@ -20,30 +20,43 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="解压附件后一堆文件啊 发现有一个文件比较敏感：.me.swp 这是个备份文件 那么会不会有什么好东西呢？ winhex打开在末尾发现了flag">
+<meta name="description" content="今天简单复盘一下前几天的一个校赛web渗透例题 由于担心扫出问题，题目给了扫描的结果，因此前期的信息收集这里可以简单点了 直接nmap找到ip地址   进来一看说是sql？  仔细看一下给的东西  有个test.php 我们打开看一下  发现好像可以读文件 但是get依旧是说没有file 猜测是post方式  post提交c.php发现可以下载文件 ：  index.php 一片过滤(你说sql注">
 <meta property="og:type" content="article">
-<meta property="og:title" content="蛛丝马迹">
-<meta property="og:url" content="http://example.com/2022/04/18/%E8%9B%9B%E4%B8%9D%E9%A9%AC%E8%BF%B9/index.html">
+<meta property="og:title" content="web_kp">
+<meta property="og:url" content="http://example.com/2023/04/29/web-kp/index.html">
 <meta property="og:site_name" content="SCP基金会中国分部驻406特别行动队">
-<meta property="og:description" content="解压附件后一堆文件啊 发现有一个文件比较敏感：.me.swp 这是个备份文件 那么会不会有什么好东西呢？ winhex打开在末尾发现了flag">
+<meta property="og:description" content="今天简单复盘一下前几天的一个校赛web渗透例题 由于担心扫出问题，题目给了扫描的结果，因此前期的信息收集这里可以简单点了 直接nmap找到ip地址   进来一看说是sql？  仔细看一下给的东西  有个test.php 我们打开看一下  发现好像可以读文件 但是get依旧是说没有file 猜测是post方式  post提交c.php发现可以下载文件 ：  index.php 一片过滤(你说sql注">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic.imgdb.cn/item/625d63c8239250f7c5a0f45c.png">
-<meta property="og:image" content="https://pic.imgdb.cn/item/625d63c8239250f7c5a0f458.png">
-<meta property="article:published_time" content="2022-04-18T13:05:31.000Z">
-<meta property="article:modified_time" content="2022-04-18T13:14:58.657Z">
+<meta property="og:image" content="https://s2.loli.net/2023/04/29/7GtboVslnQrz6FH.png">
+<meta property="og:image" content="https://s2.loli.net/2023/04/29/PxzuLTe9C7iRtbK.png">
+<meta property="og:image" content="https://s2.loli.net/2023/04/29/owrG2b3OdjEi5Bp.png">
+<meta property="og:image" content="https://s2.loli.net/2023/04/29/OqkDIh3GrioTjvZ.png">
+<meta property="og:image" content="https://s2.loli.net/2023/04/29/MdOHoGBvzA3Es91.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2023/04/29/e077a114b41b748b.png">
+<meta property="og:image" content="https://s2.loli.net/2023/04/29/QEuMWSeLo1FTpXb.png">
+<meta property="og:image" content="https://s2.loli.net/2023/04/29/MkWcSwTlpZnqjVr.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2023/04/29/ba4fb57881563c35.png">
+<meta property="og:image" content="https://s2.loli.net/2023/04/29/k5v6lrdwSVsu4GC.png">
+<meta property="og:image" content="https://s2.loli.net/2023/04/29/cMtlWgQv3rzCmVI.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2023/04/29/a0205b6548c0569b.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2023/04/29/cc392b5f0f70ad1a.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2023/04/29/8f8a461b906ac483.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2023/04/29/91b63c645288f38d.png">
+<meta property="article:published_time" content="2023-04-29T13:31:07.000Z">
+<meta property="article:modified_time" content="2023-04-29T16:00:16.154Z">
 <meta property="article:author" content="王">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic.imgdb.cn/item/625d63c8239250f7c5a0f45c.png">
+<meta name="twitter:image" content="https://s2.loli.net/2023/04/29/7GtboVslnQrz6FH.png">
 
 
-<link rel="canonical" href="http://example.com/2022/04/18/%E8%9B%9B%E4%B8%9D%E9%A9%AC%E8%BF%B9/">
+<link rel="canonical" href="http://example.com/2023/04/29/web-kp/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/04/18/%E8%9B%9B%E4%B8%9D%E9%A9%AC%E8%BF%B9/","path":"2022/04/18/蛛丝马迹/","title":"蛛丝马迹"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/04/29/web-kp/","path":"2023/04/29/web-kp/","title":"web_kp"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>蛛丝马迹 | SCP基金会中国分部驻406特别行动队</title>
+<title>web_kp | SCP基金会中国分部驻406特别行动队</title>
   
 
 
@@ -164,7 +177,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/18/%E8%9B%9B%E4%B8%9D%E9%A9%AC%E8%BF%B9/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/29/web-kp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -177,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          蛛丝马迹
+          web_kp
         </h1>
 
         <div class="post-meta-container">
@@ -187,10 +200,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-04-18 21:05:31 / 修改时间：21:14:58" itemprop="dateCreated datePublished" datetime="2022-04-18T21:05:31+08:00">2022-04-18</time>
+      <time title="创建时间：2023-04-29 21:31:07" itemprop="dateCreated datePublished" datetime="2023-04-29T21:31:07+08:00">2023-04-29</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2023-04-30 00:00:16" itemprop="dateModified" datetime="2023-04-30T00:00:16+08:00">2023-04-30</time>
+      </span>
 
   
     <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
@@ -209,12 +228,43 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><img src="https://pic.imgdb.cn/item/625d63c8239250f7c5a0f45c.png"></p>
-<p>解压附件后一堆文件啊</p>
-<p>发现有一个文件比较敏感：.me.swp</p>
-<p>这是个备份文件 那么会不会有什么好东西呢？</p>
-<p>winhex打开在末尾发现了flag</p>
-<p><img src="https://pic.imgdb.cn/item/625d63c8239250f7c5a0f458.png"></p>
+        <p>今天简单复盘一下前几天的一个校赛web渗透例题</p>
+<p>由于担心扫出问题，题目给了扫描的结果，因此前期的信息收集这里可以简单点了</p>
+<p>直接nmap找到ip地址</p>
+<p><img src="https://s2.loli.net/2023/04/29/7GtboVslnQrz6FH.png" alt="1.PNG"></p>
+<p><img src="https://s2.loli.net/2023/04/29/PxzuLTe9C7iRtbK.png" alt="2.PNG"></p>
+<p>进来一看说是sql？  仔细看一下给的东西</p>
+<p><img src="https://s2.loli.net/2023/04/29/owrG2b3OdjEi5Bp.png" alt="3.PNG"></p>
+<p>有个test.php</p>
+<p>我们打开看一下</p>
+<p><img src="https://s2.loli.net/2023/04/29/OqkDIh3GrioTjvZ.png" alt="4.PNG"></p>
+<p>发现好像可以读文件 但是get依旧是说没有file</p>
+<p>猜测是post方式 </p>
+<p>post提交c.php发现可以下载文件</p>
+<p>：</p>
+<p><img src="https://s2.loli.net/2023/04/29/MdOHoGBvzA3Es91.png" alt="5.PNG"></p>
+<p>index.php 一片过滤(你说sql注入？)</p>
+<p><img src="https://s3.bmp.ovh/imgs/2023/04/29/e077a114b41b748b.png"></p>
+<p>得到了一个数据库的账号密码 在phpmy上登录 在库里找到flag和另一个帐密</p>
+<p><img src="https://s2.loli.net/2023/04/29/QEuMWSeLo1FTpXb.png" alt="6.PNG"></p>
+<p><img src="https://s2.loli.net/2023/04/29/MkWcSwTlpZnqjVr.png" alt="7.PNG"></p>
+<p>回到最初界面 登录发现后台可以上传文件 刚开始想的是来个图片马加蚁剑 但是后来发现不大行（老马 我地老马啊）</p>
+<p>发现了文件上传的目录</p>
+<p><img src="https://s3.bmp.ovh/imgs/2023/04/29/ba4fb57881563c35.png"></p>
+<p>想到反弹shell：</p>
+<p><img src="https://s2.loli.net/2023/04/29/k5v6lrdwSVsu4GC.png" alt="8.PNG"></p>
+<p><img src="https://s2.loli.net/2023/04/29/cMtlWgQv3rzCmVI.png" alt="9.PNG"></p>
+<p>上传后运行一下</p>
+<p><img src="https://s3.bmp.ovh/imgs/2023/04/29/a0205b6548c0569b.png"></p>
+<p>嘿嘿 来了 嘿嘿</p>
+<p><img src="https://s3.bmp.ovh/imgs/2023/04/29/cc392b5f0f70ad1a.png"></p>
+<p>ls再cat一下 </p>
+<p>然后第三个需要root权限 我想得是去配置文件里找</p>
+<p>配置文件一般都非常重要 存有许多敏感信息（后来才知道预期解是内核提权）</p>
+<p><img src="https://s3.bmp.ovh/imgs/2023/04/29/8f8a461b906ac483.png"></p>
+<p>在配置文件里找到root的密码</p>
+<p><img src="https://s3.bmp.ovh/imgs/2023/04/29/91b63c645288f38d.png"></p>
+<p>直接一把梭</p>
 
     </div>
 
@@ -245,14 +295,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2022/04/18/word/" rel="prev" title="word?">
-                  <i class="fa fa-chevron-left"></i> word?
+                <a href="/2023/04/07/web%E6%B8%97%E9%80%8F/" rel="prev" title="web渗透">
+                  <i class="fa fa-chevron-left"></i> web渗透
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/05/09/misc1/" rel="next" title="misc1">
-                  misc1 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
