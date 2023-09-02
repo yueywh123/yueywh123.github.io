@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-06T12:28:19.161Z</updated>
+  <updated>2023-09-02T13:34:58.176Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ping?</title>
+    <link href="http://example.com/2023/09/02/ping/"/>
+    <id>http://example.com/2023/09/02/ping/</id>
+    <published>2023-09-02T13:26:06.000Z</published>
+    <updated>2023-09-02T13:34:58.176Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;[LitCTF 2023]Ping&lt;/p&gt;
+&lt;p&gt;打开看看&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/09/02/WBZSt3M5Qpf8HOJ.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>level-up</title>
@@ -447,30 +470,6 @@
         
     <summary type="html">&lt;p&gt;&lt;u&gt;直接上题&lt;/u&gt;    &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/08/05/mqpSr3Gi8o1D6bd.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>又是序列化</title>
-    <link href="http://example.com/2022/07/31/%E5%8F%88%E6%98%AF%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    <id>http://example.com/2022/07/31/%E5%8F%88%E6%98%AF%E5%BA%8F%E5%88%97%E5%8C%96/</id>
-    <published>2022-07-31T02:27:30.000Z</published>
-    <updated>2022-07-31T02:34:37.124Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;最近和序列化的题目过不去了&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/07/31/izft3VLYIjpF9oE.png&quot; alt=&quot;1.PNG&quot;&gt;&lt;/p&gt;
-&lt;p&gt;直接点开连接 &lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     
