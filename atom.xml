@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-02T13:34:58.176Z</updated>
+  <updated>2023-09-11T13:26:19.559Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Follow</title>
+    <link href="http://example.com/2023/09/11/Follow/"/>
+    <id>http://example.com/2023/09/11/Follow/</id>
+    <published>2023-09-11T13:14:17.000Z</published>
+    <updated>2023-09-11T13:26:19.559Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;[LitCTF 2023]Follow me and hack me&lt;/p&gt;
+&lt;p&gt;打开一看，有点简单啊&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/09/11/8I9tJpei76EYUkM.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>ping?</title>
@@ -448,28 +471,6 @@
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/08/19/wEzPUlxvI59LAjT.png&quot; alt=&quot;0.PNG&quot;&gt;&lt;/p&gt;
 &lt;p&gt;设置好线程（没设置直接全timeout）&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>rce</title>
-    <link href="http://example.com/2022/08/05/rce/"/>
-    <id>http://example.com/2022/08/05/rce/</id>
-    <published>2022-08-05T12:46:10.000Z</published>
-    <updated>2022-08-05T12:48:31.593Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;直接上题&lt;/u&gt;    &lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/08/05/mqpSr3Gi8o1D6bd.png&quot;</summary>
         
       
     
