@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-11T13:26:19.559Z</updated>
+  <updated>2023-09-30T12:39:00.411Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网站取证</title>
+    <link href="http://example.com/2023/09/30/%E7%BD%91%E7%AB%99%E5%8F%96%E8%AF%81/"/>
+    <id>http://example.com/2023/09/30/%E7%BD%91%E7%AB%99%E5%8F%96%E8%AF%81/</id>
+    <published>2023-09-30T12:29:44.000Z</published>
+    <updated>2023-09-30T12:39:00.411Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;先看题目：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/09/30/mELliprT9k2PWYx.png&quot; alt=&quot;0.PNG&quot;&gt;&lt;/p&gt;
+&lt;p&gt;第一步，直接打开D盾扫描WWW文件夹&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Follow</title>
@@ -447,30 +471,6 @@
     <summary type="html">&lt;p&gt;&lt;u&gt;太久没做sql的题目了 菜的一匹&lt;/u&gt;&lt;/p&gt;
 &lt;p&gt;看题目 两个输入框 根据题目应该存在sql注入&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/08/20/Ps3tABGdmbq6y7i.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>web</title>
-    <link href="http://example.com/2022/08/20/web/"/>
-    <id>http://example.com/2022/08/20/web/</id>
-    <published>2022-08-20T03:01:11.000Z</published>
-    <updated>2022-08-20T03:01:19.291Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;开篇没有什么提示 试着扫一下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/08/19/wEzPUlxvI59LAjT.png&quot; alt=&quot;0.PNG&quot;&gt;&lt;/p&gt;
-&lt;p&gt;设置好线程（没设置直接全timeout）&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     
