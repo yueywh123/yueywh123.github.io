@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="第一步，这里提示说访问 &#x2F;source.zip，访问成功进行下载。打开提示需要密码？？  继续分析，发现网站存在&#x2F;robots.txt，这里分析这个文件  发现其中CRC32值相同  用工具ARCHPR进行明文爆破，爆破10分钟左右成功解压加密文件  代码审计 审计得到login.php，存在Sql注入漏洞  访问login.php进行sql注入，payload如下： username&#x3D;-1’an">
+<meta property="og:type" content="article">
+<meta property="og:title" content="综合">
+<meta property="og:url" content="http://example.com/2023/12/13/%E7%BB%BC%E5%90%88/index.html">
+<meta property="og:site_name" content="Hello,world!">
+<meta property="og:description" content="第一步，这里提示说访问 &#x2F;source.zip，访问成功进行下载。打开提示需要密码？？  继续分析，发现网站存在&#x2F;robots.txt，这里分析这个文件  发现其中CRC32值相同  用工具ARCHPR进行明文爆破，爆破10分钟左右成功解压加密文件  代码审计 审计得到login.php，存在Sql注入漏洞  访问login.php进行sql注入，payload如下： username&#x3D;-1’an">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/12/13/fSHk1imCc7K3LJa.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/13/bHrphFsX1fmR5iY.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/13/VIplc3aOnXYBDhv.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/13/DG45yA9xXhUqfwH.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/13/PnItwmhQuCxRLVA.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/13/de6CnusO9Sqf8JR.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/13/4F1lBkRZzJWVKgq.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/13/RMk3hjf2JnFaLr1.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/13/eroMURnLADFGzOm.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/13/yh5n2NtCJKjO1RF.png">
+<meta property="og:image" content="https://s2.loli.net/2023/12/13/zSJitbuclghYsLD.png">
+<meta property="article:published_time" content="2023-12-13T13:57:04.000Z">
+<meta property="article:modified_time" content="2023-12-13T14:03:03.460Z">
+<meta property="article:author" content="王">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/12/13/fSHk1imCc7K3LJa.png">
+
+
+<link rel="canonical" href="http://example.com/2023/12/13/%E7%BB%BC%E5%90%88/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/12/13/%E7%BB%BC%E5%90%88/","path":"2023/12/13/综合/","title":"综合"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>综合 | Hello,world!</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Hello,world!" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hello,world!</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">找一只可可爱爱的八重樱</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">王</p>
+  <div class="site-description" itemprop="description">喵个咪</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">90</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/12/13/%E7%BB%BC%E5%90%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="王">
+      <meta itemprop="description" content="喵个咪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello,world!">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          综合
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-13 21:57:04 / 修改时间：22:03:03" itemprop="dateCreated datePublished" datetime="2023-12-13T21:57:04+08:00">2023-12-13</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>第一步，这里提示说访问 /source.zip，访问成功进行下载。打开提示需要密码？？</p>
+<p><img src="https://s2.loli.net/2023/12/13/fSHk1imCc7K3LJa.png" alt="图片1.png"></p>
+<p>继续分析，发现网站存在/robots.txt，这里分析这个文件</p>
+<p><img src="https://s2.loli.net/2023/12/13/bHrphFsX1fmR5iY.png" alt="图片2.png"></p>
+<p>发现其中CRC32值相同</p>
+<p><img src="https://s2.loli.net/2023/12/13/VIplc3aOnXYBDhv.png" alt="图片3.png"></p>
+<p>用工具ARCHPR进行明文爆破，爆破10分钟左右成功解压加密文件</p>
+<p><img src="https://s2.loli.net/2023/12/13/DG45yA9xXhUqfwH.png" alt="图片4.png"></p>
+<p>代码审计</p>
+<p>审计得到login.php，存在Sql注入漏洞</p>
+<p><img src="https://s2.loli.net/2023/12/13/PnItwmhQuCxRLVA.png" alt="图片5.png"></p>
+<p>访问login.php进行sql注入，payload如下：</p>
+<p>username=-1’and(extractvalue(1,concat(0x7e,database(),0x7e)))#</p>
+<p>‘</p>
+<p>&amp;passwd=1112’</p>
+<p>username=-1’and(extractvalue(1,concat(0x7e,(select(left(concat(passwd),31))from(users)),0x7e)))#</p>
+<p>‘</p>
+<p>&amp;passwd=1112</p>
+<p> <a target="_blank" rel="noopener" href="https://www.somd5.com/">https://www.somd5.com/</a></p>
+<p>得到密码：Do_y0u_kn0w_Wh@t_i5_fu1l_st4c|&lt;</p>
+<p><img src="https://s2.loli.net/2023/12/13/de6CnusO9Sqf8JR.png" alt="图片6.png"></p>
+<p>利用获取的密码进行登录 admin用户，跳转到 index.php ..似乎是需要去找一处Secret？？</p>
+<p>整个流程Web渗透，奇怪的是发现了一个so文件，iruby.so</p>
+<p>谁家正常人在这儿放个.so文件呢</p>
+<p><img src="https://s2.loli.net/2023/12/13/4F1lBkRZzJWVKgq.png" alt="图片7.png"></p>
+<p>.ini还有扩展调用</p>
+<p>将so文件丢到IDA里面进行静态分析，去寻找一点线索，分析分析</p>
+<p><img src="https://s2.loli.net/2023/12/13/RMk3hjf2JnFaLr1.png" alt="图片8.png"></p>
+<p><img src="https://s2.loli.net/2023/12/13/eroMURnLADFGzOm.png" alt="图片9.png"></p>
+<p>此处存在一个配置文件泄露</p>
+<p><img src="https://s2.loli.net/2023/12/13/yh5n2NtCJKjO1RF.png" alt="图片10.png"></p>
+<p>最后分析结果这里是存在一个RC4解密？？密钥为Admin，需要写一个脚本去跑</p>
+<p>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rc4</span>(<span class="params">data, key</span>):</span></span><br><span class="line">    S = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">256</span>))</span><br><span class="line">    j = <span class="number">0</span></span><br><span class="line">    out = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">256</span>):</span><br><span class="line">        j = (j + S[i] + key[i % <span class="built_in">len</span>(key)]) % <span class="number">256</span></span><br><span class="line">        S[i], S[j] = S[j], S[i]</span><br><span class="line"></span><br><span class="line">    i = j = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> char <span class="keyword">in</span> data:</span><br><span class="line">        i = (i + <span class="number">1</span>) % <span class="number">256</span></span><br><span class="line">        j = (j + S[i]) % <span class="number">256</span></span><br><span class="line">        S[i], S[j] = S[j], S[i]</span><br><span class="line">        out.append(char ^ S[(S[i] + S[j]) % <span class="number">256</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">bytes</span>(out)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data = <span class="built_in">bytes</span>([<span class="number">0x78</span>, <span class="number">0x66</span>, <span class="number">0x73</span>, <span class="number">0x4E</span>, <span class="number">0x5F</span>, <span class="number">0xC7</span>, <span class="number">0x2C</span>, <span class="number">0x9E</span>, <span class="number">0x70</span>, <span class="number">0x7C</span>,</span><br><span class="line">    <span class="number">0x52</span>, <span class="number">0xB1</span>, <span class="number">0x2D</span>, <span class="number">0x45</span>, <span class="number">0xA4</span>, <span class="number">0x08</span>, <span class="number">0x34</span>, <span class="number">0x79</span>, <span class="number">0x99</span>, <span class="number">0xDC</span>,</span><br><span class="line">    <span class="number">0xE6</span>, <span class="number">0xC2</span>, <span class="number">0x97</span>, <span class="number">0x7C</span>, <span class="number">0x37</span>, <span class="number">0x1B</span>, <span class="number">0x81</span>, <span class="number">0xE4</span>, <span class="number">0x4C</span>])</span><br><span class="line">key = <span class="string">&quot;admin&quot;</span>.encode()</span><br><span class="line">decrypted = rc4(data, key)</span><br><span class="line"><span class="built_in">print</span>(decrypted)</span><br></pre></td></tr></table></figure>
+
+<p>最终获取Secret：A secret makes a woman woman.</p>
+<p>输入secret，成功跳转获取信息？？最终是得到/proc/self/maps配置文件，泄露了大量地址</p>
+<p><img src="https://s2.loli.net/2023/12/13/zSJitbuclghYsLD.png" alt="图片11.png"></p>
+<p>总感觉后面是pwn 不会开摆</p>
+<p>（我滴任务结束啦</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class=""></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/09/30/%E7%BD%91%E7%AB%99%E5%8F%96%E8%AF%81/" rel="prev" title="网站取证">
+                  <i class="fa fa-chevron-left"></i> 网站取证
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">王</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

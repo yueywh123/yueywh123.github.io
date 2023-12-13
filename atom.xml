@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-30T12:39:00.411Z</updated>
+  <updated>2023-12-13T14:03:03.460Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>综合</title>
+    <link href="http://example.com/2023/12/13/%E7%BB%BC%E5%90%88/"/>
+    <id>http://example.com/2023/12/13/%E7%BB%BC%E5%90%88/</id>
+    <published>2023-12-13T13:57:04.000Z</published>
+    <updated>2023-12-13T14:03:03.460Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;第一步，这里提示说访问 /source.zip，访问成功进行下载。打开提示需要密码？？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2023/12/13/fSHk1imCc7K3LJa.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>网站取证</title>
     <link href="http://example.com/2023/09/30/%E7%BD%91%E7%AB%99%E5%8F%96%E8%AF%81/"/>
     <id>http://example.com/2023/09/30/%E7%BD%91%E7%AB%99%E5%8F%96%E8%AF%81/</id>
     <published>2023-09-30T12:29:44.000Z</published>
-    <updated>2023-09-30T12:39:00.411Z</updated>
+    <updated>2023-09-30T12:45:34.567Z</updated>
     
     
       
@@ -448,29 +470,6 @@
     <summary type="html">&lt;p&gt; &lt;u&gt;埃氏筛法求素数(python)&lt;/u&gt;&lt;/p&gt;
 &lt;p&gt;原来写的暴力穷举：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/09/20/epjfTBCFE3qNokd.png&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>babysql</title>
-    <link href="http://example.com/2022/08/20/babysql/"/>
-    <id>http://example.com/2022/08/20/babysql/</id>
-    <published>2022-08-20T03:04:28.000Z</published>
-    <updated>2022-08-20T03:04:34.869Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;太久没做sql的题目了 菜的一匹&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;看题目 两个输入框 根据题目应该存在sql注入&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2022/08/20/Ps3tABGdmbq6y7i.png&quot;</summary>
         
       
     
